@@ -8,6 +8,5 @@
 .project
 .settings
 *.DS_Store
-public/
 /project/target/
 /project/project/

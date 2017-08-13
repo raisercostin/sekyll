@@ -6,6 +6,6 @@ pages:
   - echo "starting static noop script"
   artifacts:
     paths:
-    - public/
+    - docs/
   only:
   - master

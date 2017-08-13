@@ -8,8 +8,8 @@ lazy val `sekyll` = (project in file("."))
 scalaVersion := "2.11.7"
 //scalacOptions += "-Ylog-classpath"
 JsEngineKeys.engineType := JsEngineKeys.EngineType.Node
-WebKeys.stagingDirectory := file("public")
-cleanFiles <+= baseDirectory { base => base / "public" }
+WebKeys.stagingDirectory := file("docs")
+cleanFiles <+= baseDirectory { base => base / "docs" }
 
 libraryDependencies ++= Seq(
   "org.webjars" % "normalize.css" % "3.0.2",
