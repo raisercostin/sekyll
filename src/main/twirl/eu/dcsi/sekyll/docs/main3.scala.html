@@ -1,0 +1,638 @@
+@import eu.dcsi.sekyll.docs.svg.html._
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(title: Option[String], canonical: Option[String] = None)(header: Html = HtmlFormat.empty)(footer: Html = HtmlFormat.empty)(content: Html)(implicit context: LagomContext)
+<!DOCTYPE html>
+
+<html lang="en-US" class="css3transitions">
+ 
+<head>
+
+    <meta charset="UTF-8" />
+	<base href="/">
+
+    <!-- Responsive Meta -->
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+    <!-- Pingback URL -->
+    <link rel="pingback" href="http://dcsi.labs.roweb.ro/xmlrpc.php" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+
+    <title>DCSI</title>
+
+ <script type='text/javascript'>
+ /* <![CDATA[ */  
+var simple_global = { 
+ 	ajaxurl: 'http://dcsi.labs.roweb.ro/wp-admin/admin-ajax.php',
+ 	button_style: 'default'
+ 	}; 
+ /* ]]> */ 
+ </script>
+ 
+ <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="DCSI &raquo; Feed" href="http://dcsi.labs.roweb.ro/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DCSI &raquo; Comments Feed" href="http://dcsi.labs.roweb.ro/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/dcsi.labs.roweb.ro\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='mailchimpSF_main_css-css'  href='http://dcsi.labs.roweb.ro/?mcsf_action=main_css&#038;ver=4.7.2' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/mailchimp/css/ie.css?ver=4.7.2' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='layerslider-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/LayerSlider/static/layerslider/css/layerslider.css?ver=6.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='ls-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900%7COpen+Sans:300%7CIndie+Flower:regular%7COswald:300,regular,700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.3.0.2' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='style-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/style.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-bootstrap-responsive-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/css/bootstrap-responsive.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.fancybox-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/fancybox/source/jquery.fancybox.css?v=2.1.2&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='idangerous.swiper-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/css/idangerous.swiper.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='owl.carousel-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/css/owl.carousel.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='owl.theme-css'  href='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/css/owl.theme.css?ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-dynamic-css-css'  href='http://dcsi.labs.roweb.ro/wp-admin/admin-ajax.php?action=dynamic_css&#038;ver=4.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-simple_redata-css'  href='http://fonts.googleapis.com/css?family=Lato%3A100%2C300%2C400%2C700%2C900%2C100italic%2C300italic%2C400italic%2C700italic%2C900italic%7CRaleway%3A400%7COpen+Sans&#038;subset=latin&#038;ver=4.7.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/LayerSlider/static/layerslider/js/greensock.js?ver=1.19.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var LS_Meta = {"v":"6.0.6"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.kreaturamedia.jquery.js?ver=6.0.6'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/LayerSlider/static/layerslider/js/layerslider.transitions.js?ver=6.0.6'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.3.0.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.3.0.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/wp-retina-2x/js/picturefill.min.js?ver=3.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var s_gb = {"theme_css":"http:\/\/dcsi.labs.roweb.ro\/wp-content\/themes\/the-simple\/css\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/simple-loadCSS.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/pathformer.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/vivus.js?ver=1'></script>
+<meta name="generator" content="Powered by LayerSlider 6.0.6 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress." />
+<!-- LayerSlider updates and docs at: https://layerslider.kreaturamedia.com -->
+<link rel='https://api.w.org/' href='http://dcsi.labs.roweb.ro/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dcsi.labs.roweb.ro/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dcsi.labs.roweb.ro/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.7.2" />
+<link rel="canonical" href="http://dcsi.labs.roweb.ro/" />
+<link rel='shortlink' href='http://dcsi.labs.roweb.ro/' />
+<link rel="alternate" type="application/json+oembed" href="http://dcsi.labs.roweb.ro/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdcsi.labs.roweb.ro%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://dcsi.labs.roweb.ro/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fdcsi.labs.roweb.ro%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><meta name="generator" content="Powered by Slider Revolution 5.3.0.2 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<style type="text/css" title="dynamic-css" class="options-output">#logo img{height:25px;}.bg_image_404{background-color:#f5f5f5;background-size:cover;background-position:center center;background-image:url('http://thesimple.ellethemes.com/wp-content/uploads/2016/05/Scene-16.png');}header#header .row-fluid .span12, .header_wrapper, .snap_header{height:100px;}nav .menu > li > a, nav .menu > li.hasSubMenu:after,header#header .header_tools .vert_mid > a:not(#trigger-overlay), header#header .header_tools, header#header .header_tools .cart .cart_icon, .header_tools .right_search{font-family:Lato;text-align:center;text-transform:uppercase;line-height:22px;letter-spacing:1px;font-weight:400;font-style:normal;color:#2b2b2b;font-size:14px;}nav .menu > li{padding-right:15px;padding-left:15px;}nav .menu > li > ul.sub-menu,nav .menu > li > ul.sub-menu ul{width:220px;}nav .menu li > ul,.simple_custom_menu_mega_menu,.menu-small,.header_tools .cart .content, .snap-drawer-left{background-color:rgba(28,28,28,0.93);}nav .simple_custom_menu_mega_menu > ul > li{color:#282828;}nav .menu li > ul.sub-menu li, .menu-small ul li a, .header_tools .cart{text-transform:capitalize;letter-spacing:0.5px;color:#9e9e9e;font-size:13px;}nav .simple_custom_menu_mega_menu ul>li h6, .menu-small ul.menu .simple_custom_menu_mega_menu h6, .menu-small ul.menu > li > a {text-transform:uppercase;letter-spacing:1px;font-weight:600;color:#fff;font-size:14px;}.top_nav{background-color:#f6f6f6;}.top_nav{font-family:Raleway;font-weight:400;font-style:normal;color:#757575;font-size:12px;}.top_nav, .top_nav .widget{height:50px;}.header_page,.header_page{height:600px;}.header_page,.header_page{color:#ffffff;}.header_page,.header_page{background-color:#111111;background-size:cover;background-position:center center;background-image:url('http://dcsi.labs.roweb.ro/wp-content/uploads/2016/05/a9a53469-1.jpg');}.sticky_header header#header .row-fluid .span12,.sticky_header .header_wrapper{height:60px;}.sticky_header header#header{background-color:rgba(255,255,255,0.8);}.header_11 nav li > a:hover, .header_11 nav li.current-menu-item > a, .header_11 nav li.current-menu-parent > a ,.header_10 nav li > a:hover, .header_10 nav li.current-menu-item > a, .header_10 nav li.current-menu-parent > a ,.header_9 nav li > a:hover, .header_9 nav li.current-menu-item > a, .header_9 nav li.current-menu-parent > a ,.header_8 nav li > a:hover, .header_8 nav li.current-menu-item > a, .header_8 nav li.current-menu-parent > a ,.header_7 nav li > a:hover, .header_7 nav li.current-menu-item > a, .header_7 nav li.current-menu-parent > a ,.header_5 nav li > a:hover, .header_5 nav li.current-menu-item > a, .header_5 nav li.current-menu-parent > a ,.header_3 nav li > a:hover, .header_3 nav li.current-menu-item > a, .header_3 nav li.current-menu-parent > a ,.header_2 nav li > a:hover, .header_2 nav li.current-menu-item > a, .header_2 nav li.current-menu-parent > a ,.simple_slider .swiper-slide .buttons.colors-light a.colored:hover *,.services_steps .icon_wrapper i,.testimonial_carousel .item .param span,.services_large .icon_wrapper i,.animated_counter i,.services_medium.style_1 i,.services_small dt i,.single_staff .social_widget li a:hover i,.single_staff .position,.list li.titledesc dl dt i,.list li.simple i,.page_parents li a:hover,#portfolio-filter ul li.active a,.content_portfolio.fullwidth #portfolio-filter ul li.active a,a:hover,.header_1 nav li.current-menu-item > a,.blog-article h1 a:hover, .blog-article.timeline-style .content .quote i,.header_1 nav li.current-menu-item:after,.header_1 nav li > a:hover,.header_1 nav li:hover:after,header#header .header_tools > a:hover,footer#footer a:hover,aside ul li:hover:after,.highlights,.blog-article .tags{color:#1bb7e4;}body{color:#777777;}a{color:#9e9e9e;}a:hover{color:#1bb7e4;}h1,h2,h3,h4,h5,h6,.portfolio_single ul.info li .title, .skill_title{color:#444444;}.p_pagination .pagination span,.testimonial_cycle .item p,#portfolio-filter ul li.active, #faq-filter ul li.active, .accordion.style_1 .accordion-heading .accordion-toggle, .accordion.style_2 .accordion-heading .accordion-toggle, .services_medium.style_1 .icon_wrapper, .skill{background-color:#f5f5f5;}#content{background-color:transparent;}.header_page.normal h1{text-transform:none;font-weight:300;font-size:32px;}.header_page.with_subtitle.normal .titles h1{text-transform:none;font-weight:300;font-size:32px;}.header_page.with_subtitle.normal .titles h3{text-transform:none;font-weight:400;font-size:15px;}.header_page.centered h1, .header_page.left h1{text-transform:none;line-height:80px;font-weight:300;font-style:normal;font-size:70px;}.header_page.with_subtitle.centered .titles h1, .header_page.with_subtitle.left .titles h1{text-transform:none;line-height:80px;letter-spacing:1px;font-weight:300;font-size:70px;}.header_page.with_subtitle.centered .titles h3, .header_page.with_subtitle.left .titles h3{font-family:Raleway;text-transform:capitalize;line-height:30px;font-size:20px;}footer#footer .widget-title{text-transform:uppercase;letter-spacing:2px;font-weight:600;color:#f2f2f2;}footer#footer, footer#footer .contact_information dd .title{color:#888888;}footer#footer a, footer#footer .contact_information dd p{color:#bbbbbb;}footer#footer .inner{background-color:#1a1c1e;}#copyright, footer .widget_recent_comments li, footer .tagcloud a{background-color:#212121;}.footer_social_icons.circle li{background-color:#333333;}.footer_social_icons.circle li a i{color:#777777;}.blog-article.standard-style .content h1, .blog-article.alternate-style .content h1, .blog-article.timeline-style .content h1, .blog-article.fullscreen-single h1{font-family:Lato;text-transform:capitalize;line-height:30px;font-weight:400;color:#444444;font-size:28px;}.blog-article.alternate-style .info, .blog-article.timeline-style .info, .blog-article.standard-style .info, .blog-article.grid-style .info, .fullscreen-single .info, .recent_news .blog-item .info, .latest_blog .blog-item .info {line-height:20px;color:#9e9e9e;font-size:13px;}.blog-article.alternate-style .info i, .blog-article.timeline-style .info i, .blog-article.standard-style .info i, .blog-article.grid-style .info, .fullscreen-single .info i, .latest_blog .blog-item .info i, .recent_news .blog-item .info i {font-size:13px;}.blog-article.timeline-style .post_box, .blog-article.grid-style .gridbox{background-color:#ffffff;}.fullscreen-blog-article .content{background-color:rgba(255,255,255,0.87);}aside .widget-title, .portfolio_single h4{text-transform:uppercase;line-height:20px;letter-spacing:1px;font-weight:600;color:#444444;font-size:15px;}aside .widget-title{margin-bottom:24px;}aside .widget{margin-bottom:35px;}aside .tagcloud a{background-color:#ffffff;}aside .tagcloud a{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;}aside .tagcloud a{color:#444444;}.simple_slider_wrapper{background-color:#222222;}#portfolio-filter ul li a, #faq-filter ul li a{text-transform:uppercase;letter-spacing:1px;font-weight:400;color:#757575;font-size:14px;}#portfolio-filter ul li.active a, #portfolio-filter ul li a:hover, #faq-filter ul li.active a, #faq-filter ul li a:hover{color:#222222;}.content_portfolio.fullwidth .filter-row{background-color:#222222;}.content_portfolio.fullwidth #portfolio-filter ul li a{color:rgba(255,255,255,0.8);}.content_portfolio.fullwidth #portfolio-filter ul li a:hover{color:#ffffff;}.portfolio-item.overlayed .tpl2 .bg{background-color:rgba(46,46,46,0.82);}.portfolio-item.overlayed h4{text-transform:capitalize;letter-spacing:1px;font-weight:700;color:#fff;}.portfolio-item.overlayed h6{text-transform:none;font-weight:300;color:#fff;font-size:15px;}.portfolio-item.grayscale .project{background-color:#ffffff;}.portfolio-item.grayscale .project h5{font-weight:400;}.portfolio-item.grayscale .project h6{color:#bebebe;}.portfolio-item.basic .bg{background-color:rgba(60,199,198,0.8);}.portfolio-item.basic .link{color:#3cc7c6;}.portfolio-item.basic .show_text h5{text-align:center;text-transform:capitalize;letter-spacing:1px;font-weight:700;color:#222;}.portfolio-item.basic .show_text h6{text-align:center;font-weight:300;color:#565656;}.accordion.style_2 .accordion-heading .accordion-toggle, .accordion.style_1 .accordion-heading .accordion-toggle, .accordion.style_3 .accordion-heading .accordion-toggle{text-transform:uppercase;letter-spacing:1px;font-weight:600;color:#555;font-size:13px;} .accordion.style_2 .accordion-heading.in_head .accordion-toggle, .accordion.style_3 .accordion-heading.in_head .accordion-toggle{color:#3cc7c6;}.tabbable.tabs-top.style_1 .nav.nav-tabs li.active a{color:#ffffff;}.block_title.column_title h1{font-family:Lato;text-align:left;text-transform:none;line-height:48px;letter-spacing:0px;font-weight:300;color:#222;}.block_title.column_title h4{font-family:Lato;text-align:left;text-transform:none;font-weight:300;color:#909090;}.block_title.section_title h1{font-family:Lato;text-transform:capitalize;line-height:50px;letter-spacing:0px;font-weight:300;color:#333;}.block_title.section_title p{font-family:Lato;line-height:28px;letter-spacing:0.5px;font-weight:300;color:#777777;font-size:20px;}.odometer{font-family:Lato;line-height:48px;letter-spacing:2px;font-weight:300;color:#333333;font-size:38px;}.testimonial_carousel .item p{line-height:30px;font-weight:400;color:#999999;font-size:17px;}.textbar h2{text-transform:none;letter-spacing:0px;font-weight:300;color:#222;font-size:28px;}.btn-bt{text-transform:capitalize;letter-spacing:1px;font-weight:400;color:#ffffff;font-size:15px;}.woocommerce #content div.product .product_title, .woocommerce div.product .product_title, .woocommerce-page #content div.product .product_title, .woocommerce-page div.product .product_title, .woocommerce ul.products li.product h6, .woocommerce-page ul.products li.product h6{text-transform:capitalize;letter-spacing:1px;font-weight:300;}.woocommerce ul.products li.product:hover .overlay{background-color:rgba(255,255,255,0.95);}body{font-family:Lato,Arial, Helvetica, sans-serif;line-height:26px;letter-spacing:0px;font-weight:400;font-style:normal;color:#999999;font-size:16px;}h1,h2,h3,h4,h5,h6,.skill_title,.tabbable.tabs-top.style_1 .nav.nav-tabs li a, .blog-article.timeline-style .timeline .date .month{font-family:Lato;letter-spacing:1px;font-weight:400;font-style:normal;}h1{line-height:50px;font-size:45px;}h2{line-height:28px;font-size:22px;}h3{line-height:26px;font-size:20px;}h4{line-height:24px;font-size:17px;}h5{line-height:22px;font-size:16px;}h6{line-height:20px;font-size:14px;}.wpb_row.section-style, .wpb_row.standard_section{margin-bottom:70px;}#content{padding-top:70px;padding-bottom:70px;}</style><style type="text/css" data-type="vc_custom-css">.calltoaction{box-shadow: 5px 5px 8px rgba(99, 99, 99, 0.13);}
+.tab_icons .vc_tta-tabs-container i {
+    font-size: 30px !important;
+    margin-bottom: 30px;
+    width: 100%;
+    float: left;
+}
+.tab_icons .vc_tta-panel-body{padding:0 !important;border:none !important;}
+.no_margin .vc_column_container>.vc_column-inner{padding-left:0px;}</style><style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1487601347634{padding-top: 10px !important;padding-bottom: 10px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	<link rel="stylesheet" type='text/css' href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css">	
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+	<link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
+    <script src="@context.path/@context.assetFingerPrint-all-scripts-concat.js"></script>
+</head>
+
+<!-- End of Header -->
+
+<body  class="home page-template-default page page-id-3506 header_1 fullwidth_slider_page nicescroll header_transparency wpb-js-composer js-comp-ver-5.0.1 vc_responsive">
+aa
+	@eu.dcsi.website.part.html.menu()
+bb
+
+
+
+    <div class="extra_navigation right">
+        <a href="#" class="close"></a>
+
+        <div class="content"></div>
+    </div>
+
+
+
+
+<!-- check if siden menu in responsive is selected-->
+<!-- end check if siden menu in responsive is selected-->
+
+<div class="viewport  "  >
+
+<!-- Used for boxed layout -->
+    
+
+<!-- Start Top Navigation -->
+    
+    <!-- End of Top Navigation -->
+
+        
+        
+    
+    
+    
+     
+
+    
+    
+    <!-- Header BEGIN -->
+    
+    <div  class="header_wrapper   header_1  normal  background--light  ">
+        
+        <!-- Start Top Navigation -->
+                <!-- End of Top Navigation -->
+
+        <header id="header" class="">
+                        <div class="container">
+                    	   <div class="row-fluid">
+                    <div class="span12">
+                        
+
+                        
+                        <!-- Logo -->
+                                                <div id="logo" class="">
+                            <a href='http://dcsi.labs.roweb.ro/'><img class='dark' src=http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/DCSI.png alt='' /><img class='light' src=http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/logo2.png alt='' /></a>  
+                        </div>
+                        <!-- #logo END -->
+
+                        
+                                                <!-- Tools -->
+                            <div class="header_tools">
+                                <div class="vert_mid">
+                                    
+                                    
+                                    
+                                                                        <a class="extra_navigation_button" href="#">
+                                        <i class="lnr lnr-menu"></i>
+                                    </a>  
+                                      
+                                </div>
+                            </div>
+                        <!-- End Tools-->
+                        
+                        
+                        <!-- Navigation -->
+    			         
+                        
+                        	
+                        
+                                                <div id="navigation" class="nav_top pull-right  ">
+                            <nav>
+                            <ul id="menu-main_nav" class="menu simple_megemenu dl-menu">
+                            
+                            @renderNode(n: eu.dcsi.website.TreeNode) = {
+  <li>@n.name</li>
+  @if(!n.children.isEmpty) {
+    <ul>
+      @for(c <- n.children) {
+        @renderNode(c)
+      }
+    </ul>
+  }
+}
+
+<ul>
+   @renderNode(eu.dcsi.website.Website.menu)
+</ul>
+
+                            @for(item <- eu.dcsi.website.Website.first){
+<li id="menu-item-7181" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="/@item/">@item</a></li>                            
+                            }
+                            
+                            <!-- 
+<li id="menu-item-6448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3506 current_page_item" data-bg=""><a href="http://dcsi.labs.roweb.ro/">HOME</a></li>
+<li id="menu-item-7181" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/service/">SERVICES</a></li>
+<li id="menu-item-7182" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/case-studies/">CASE STUDIES</a></li>
+<li id="menu-item-7282" class="menu-item menu-item-type-custom menu-item-object-custom" data-bg=""><a target="_blank" href="http://blog.dcsi.eu">BLOG</a></li>
+<li id="menu-item-7183" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/about-us/">ABOUT US</a></li>
+<li id="menu-item-7244" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/contact/">CONTACT</a></li>
+</ul> 
+ -->
+                            </nav>
+                        </div>
+                         
+
+                        <!-- #navigation -->
+
+                         <!-- End custom menu here -->
+                            		    	         <a href="#" id="open-left" class="mobile_small_menu open"></a>
+                        
+                                                 
+                                                
+
+
+                    </div>
+                </div>
+                                
+                        </div>  
+                                    
+                        <!-- Responsive Menu -->
+                <div class="row-fluid">
+                    <div class="row-fluid">
+  <div class="menu-small">
+    
+    <ul id="mobile-menu" class="menu simple_megemenu dl-menu"><li id="responsive-menu-item-6448" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3506 current_page_item" data-bg=""><a href="http://dcsi.labs.roweb.ro/">HOME</a></li>
+<li id="responsive-menu-item-7181" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/service/">SERVICES</a></li>
+<li id="responsive-menu-item-7182" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/case-studies/">CASE STUDIES</a></li>
+<li id="responsive-menu-item-7282" class="menu-item menu-item-type-custom menu-item-object-custom" data-bg=""><a target="_blank" href="http://blog.dcsi.eu">BLOG</a></li>
+<li id="responsive-menu-item-7183" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/about-us/">ABOUT US</a></li>
+<li id="responsive-menu-item-7244" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/contact/">CONTACT</a></li>
+</ul>    
+  </div> 
+</div> 
+                </div>
+            <!-- End Responsive Menu -->
+                                </header>
+
+    </div>
+    
+     
+
+    
+        
+  
+    <div class="top_wrapper">
+            
+
+    <section id="slider-fullwidth"  class="slider ">
+                                       
+    
+        <link href="http://fonts.googleapis.com/css?family=Lato%3A300" rel="stylesheet" property="stylesheet" type="text/css" media="all" />
+<div id="start_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.3.0.2 auto mode -->
+	<div id="start" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="500"  data-thumb="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/sliderimg-100x50.png"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="Intro" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+		<!-- MAIN IMAGE -->
+		<img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/sliderimg.png"  alt="" title="sliderimg"  width="1295" height="615" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="5" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<h1 class="tp-caption FullSiteBlock-Title   tp-resizeme rs-parallaxlevel-6" 
+			 id="slide-1-layer-3" 
+			 data-x="['left','left','left','left']" data-hoffset="['-16','-22','16','20']" 
+			 data-y="['top','top','top','top']" data-voffset="['287','246','228','150']" 
+						data-fontsize="['40','45','40','26']"
+			data-lineheight="['65','60','50','40']"
+			data-width="['723','500','350','200']"
+			data-height="none"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":610,"speed":2500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":770,"frame":"999","to":"opacity:0;","ease":"Power4.easeIn"}]'
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 5; min-width: 723px; max-width: 723px; white-space: normal; font-size: 40px;border-width:0px 0px 0px 0px;">Highly Skilled Professionals
+ </h1>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption FullSiteBlock-SubTitle   tp-resizeme rs-parallaxlevel-6" 
+			 id="slide-1-layer-4" 
+			 data-x="['left','left','left','left']" data-hoffset="['49','-30','18','20']" 
+			 data-y="['top','top','top','top']" data-voffset="['378','391','347','283']" 
+						data-fontsize="['18','20','17','12']"
+			data-lineheight="['35','32','28','24']"
+			data-width="['603','500','350','200']"
+			data-height="['171','none','none','none']"
+			data-whitespace="normal"
+ 
+			data-type="text" 
+			data-responsive_offset="on" 
+
+			data-frames='[{"delay":1170,"speed":2000,"frame":"0","from":"y:30px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":800,"frame":"999","to":"opacity:0;","ease":"Power4.easeIn"}]'
+			data-textAlign="['center','center','center','center']"
+			data-paddingtop="[0,0,0,0]"
+			data-paddingright="[0,0,0,0]"
+			data-paddingbottom="[0,0,0,0]"
+			data-paddingleft="[0,0,0,0]"
+
+			style="z-index: 6; min-width: 603px; max-width: 603px; max-width: 171px; max-width: 171px; white-space: normal; font-size: 18px; line-height: 35px; color: rgba(119, 119, 119, 1.00);border-width:0px 0px 0px 0px;">We are a team of over 40 specialists<br/>
+enginneris,architects,developers and project managers<br/>
+ready to deliver optimal solutions for your company. </div>
+	</li>
+</ul>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+						if(htmlDiv) {
+							htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+						}else{
+							var htmlDiv = document.createElement("div");
+							htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+							document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+						}
+					</script>
+<div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss=".tp-caption.FullSiteBlock-Title,.FullSiteBlock-Title{color:rgba(51,51,51,1.00);font-size:55px;line-height:65px;font-weight:300;font-style:normal;font-family:Lato;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px}.tp-caption.FullSiteBlock-SubTitle,.FullSiteBlock-SubTitle{color:rgba(51,51,51,1.00);font-size:25px;line-height:34px;font-weight:300;font-style:normal;font-family:Lato;text-decoration:none;background-color:transparent;border-color:transparent;border-style:none;border-width:0px;border-radius:0 0 0 0px}";
+				if(htmlDiv) {
+					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+				}else{
+					var htmlDiv = document.createElement("div");
+					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+				}
+			</script>
+		<script type="text/javascript">
+						/******************************************
+				-	PREPARE PLACEHOLDER FOR SLIDER	-
+			******************************************/
+
+			var setREVStartSize=function(){
+				try{var e=new Object,i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+					e.c = jQuery('#start');
+					e.responsiveLevels = [1240,1024,778,480];
+					e.gridwidth = [1240,1024,778,480];
+					e.gridheight = [800,768,690,520];
+							
+					e.sliderLayout = "auto";
+					if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})
+					
+				}catch(d){console.log("Failure at Presize of Slider:"+d)}
+			};
+			
+			setREVStartSize();
+			
+						var tpj=jQuery;
+			
+			var revapi1;
+			tpj(document).ready(function() {
+				if(tpj("#start").revolution == undefined){
+					revslider_showDoubleJqueryError("#start");
+				}else{
+					revapi1 = tpj("#start").show().revolution({
+						sliderType:"standard",
+jsFileLocation:"//dcsi.labs.roweb.ro/wp-content/plugins/revslider/public/assets/js/",
+						sliderLayout:"auto",
+						dottedOverlay:"none",
+						delay:9000,
+						navigation: {
+							keyboardNavigation:"off",
+							keyboard_direction: "vertical",
+							mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+							onHoverStop:"off",
+							bullets: {
+								enable:true,
+								hide_onmobile:false,
+								style:"uranus",
+								hide_onleave:false,
+								direction:"horizontal",
+								h_align:"center",
+								v_align:"bottom",
+								h_offset:0,
+								v_offset:20,
+								space:5,
+								tmp:'<span class="tp-bullet-inner"></span>'
+							}
+						},
+						responsiveLevels:[1240,1024,778,480],
+						visibilityLevels:[1240,1024,778,480],
+						gridwidth:[1240,1024,778,480],
+						gridheight:[800,768,690,520],
+						lazyType:"none",
+						parallax: {
+							type:"scroll",
+							origo:"slidercenter",
+							speed:300,
+							levels:[15,16,17,18,19,20,-10,-20,-30,-40,-50,-60,15,10,100,55],
+							type:"scroll",
+						},
+						shadow:0,
+						spinner:"off",
+						stopLoop:"off",
+						stopAfterLoops:-1,
+						stopAtSlide:-1,
+						shuffle:"off",
+						autoHeight:"off",
+						disableProgressBar:"on",
+						hideThumbsOnMobile:"off",
+						hideSliderAtLimit:0,
+						hideCaptionAtLimit:0,
+						hideAllCaptionAtLilmit:0,
+						debugMode:false,
+						fallbacks: {
+							simplifyAll:"off",
+							nextSlideOnWindowFocus:"off",
+							disableFocusListener:false,
+						}
+					});
+				}
+			});	/*ready*/
+		</script>
+		<script>
+					var htmlDivCss = unescape("%23start%20.uranus%20.tp-bullet%7B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C%200%29%3B%0A%20%20-webkit-transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20transition%3A%20box-shadow%200.3s%20ease%3B%0A%20%20background%3Atransparent%3B%0A%20%20width%3A15px%3B%0A%20%20height%3A15px%3B%0A%7D%0A%23start%20.uranus%20.tp-bullet.selected%2C%0A%23start%20.uranus%20.tp-bullet%3Ahover%20%7B%0A%20%20box-shadow%3A%200%200%200%202px%20rgba%28255%2C%20255%2C%20255%2C1%29%3B%0A%20%20border%3Anone%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background%3Atransparent%3B%0A%7D%0A%0A%23start%20.uranus%20.tp-bullet-inner%20%7B%0A%20%20-webkit-transition%3A%20background-color%200.3s%20ease%2C%20-webkit-transform%200.3s%20ease%3B%0A%20%20transition%3A%20background-color%200.3s%20ease%2C%20transform%200.3s%20ease%3B%0A%20%20top%3A%200%3B%0A%20%20left%3A%200%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20outline%3A%20none%3B%0A%20%20border-radius%3A%2050%25%3B%0A%20%20background-color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%0A%20%20background-color%3A%20rgba%28255%2C%20255%2C%20255%2C%200.3%29%3B%0A%20%20text-indent%3A%20-999em%3B%0A%20%20cursor%3A%20pointer%3B%0A%20%20position%3A%20absolute%3B%0A%7D%0A%0A%23start%20.uranus%20.tp-bullet.selected%20.tp-bullet-inner%2C%0A%23start%20.uranus%20.tp-bullet%3Ahover%20.tp-bullet-inner%7B%0A%20transform%3A%20scale%280.4%29%3B%0A%20-webkit-transform%3A%20scale%280.4%29%3B%0A%20background-color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}
+					else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				  </script>
+				</div><!-- END REVOLUTION SLIDER -->
+    </section>
+
+
+       
+<!-- .header -->
+    
+    
+<section id="content" class="composer_content" style="background-color:#ffffff;">
+        
+            <div id="fws_598445d64dfee" class="wpb_row vc_row vc_row-fluid  animate_onoffset row-dynamic-el standard_section    normal " style=""><div  style="position: absolute;top: 0;"></div><div class="container  dark"><div class="section_clear"><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><div class=" services_medium style_1 wpb_content_element"><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/05/folderopen.png" alt="" /><h4><a href="/identity-and-access-management/">Identity and Access Management</a></h4><p>Providing the right people with the right access at the right time.</p></div><h2 style="font-size: 14px;color: #1bb7e4;text-align: center" class="vc_custom_heading"><a href="/identity-and-access-management/">Read More</a></h2></div></div></div><div class="wpb_column column_container centered_col with_padding wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><div class=" services_medium style_1 wpb_content_element"><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/05/icon2.png" alt="" /><h4><a href="/solutions-architecture/">Solution Architecture</a></h4><p>We provide solutions tailored specifically to your business and security objectives.</p>
+<p><span id="more-3506"></span></p></div><h2 style="font-size: 14px;color: #1bb7e4;text-align: center" class="vc_custom_heading"><a href="/solutions-architecture/">Read More</a></h2></div></div></div><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><div class=" services_medium style_1 wpb_content_element"><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/05/icon3.png" alt="" /><h4><a href="/oracle-database-advanced-administration/">Oracle Database Administration</a></h4><p>We offer a 24*7*365 and cost-effective support on DBA tuning and troubleshooting.</p></div><h2 style="font-size: 14px;color: #1bb7e4;text-align: center" class="vc_custom_heading"><a href="/oracle-database-advanced-administration/">Read More</a></h2></div></div></div></div></div></div><div id="fws_598445d650525" class="wpb_row vc_row vc_row-fluid  animate_onoffset row-dynamic-el section-style    normal " style="background-color: #f6f6f6; padding-top: 90px ; padding-bottom: 90px ; "><div  style="position: absolute;top: 0;"></div><div class="container  dark"><div class="section_clear"><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner vc_custom_1487601347634 "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><div class="wpb_content_element block_title section_title inner-only_text "><h1>Our Clients</h1></div><div class="vc_empty_space"  style="height: 10px" ><span class="vc_empty_space_inner"></span></div>
+<div class="dark_clients clients_el"><div class="pagination"><a href="#" class="prev"><i class="lnr lnr-chevron-left"></i></a><a href="#" class="next"><i class="lnr lnr-chevron-right"></i></a></div><section class="row clients clients_caro"><div class="item"><a href="" title=""><img width="221" height="28" src="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/oracle-1.png" class="attachment-full size-full" alt="" /></a></div><div class="item"><a href="" title=""><img width="126" height="50" src="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/gothaer.png" class="attachment-full size-full" alt="" /></a></div><div class="item"><a href="" title=""><img width="155" height="64" src="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/DFPRADM.png" class="attachment-full size-full" alt="" /></a></div><div class="item"><a href="" title=""><img width="163" height="71" src="http://dcsi.labs.roweb.ro/wp-content/uploads/2017/02/EuroCenterBank.png" class="attachment-full size-full" alt="" /></a></div></section></div><div class="vc_empty_space"  style="height: 10px" ><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div></div></div><div id="fws_598445d651dc4" class="wpb_row vc_row vc_row-fluid  animate_onoffset row-dynamic-el full-width-content section-style    vc_row-o-equal-height normal " style="padding-bottom: 410px ; "><div  style="position: absolute;top: 0;"></div><div class="col span_12  dark"><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><!-- vc_grid start -->
+<div class="vc_grid-container-wrapper vc_clearfix">
+	<div class="vc_grid-container vc_clearfix wpb_content_element vc_basic_grid" data-initial-loading-animation="fadeIn" data-vc-grid-settings="{&quot;page_id&quot;:3506,&quot;style&quot;:&quot;all&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1487682739360-42bf951d-c096-0&quot;,&quot;tag&quot;:&quot;vc_basic_grid&quot;}" data-vc-request="http://dcsi.labs.roweb.ro/wp-admin/admin-ajax.php" data-vc-post-id="3506" data-vc-public-nonce="c3df3a5059">
+	</div>
+</div><!-- vc_grid end -->
+</div></div></div><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><!-- vc_grid start -->
+<div class="vc_grid-container-wrapper vc_clearfix">
+	<div class="vc_grid-container vc_clearfix wpb_content_element vc_basic_grid" data-initial-loading-animation="none" data-vc-grid-settings="{&quot;page_id&quot;:3506,&quot;style&quot;:&quot;all&quot;,&quot;action&quot;:&quot;vc_get_vc_grid_data&quot;,&quot;shortcode_id&quot;:&quot;1487682739361-3bdc4331-fcfc-7&quot;,&quot;tag&quot;:&quot;vc_basic_grid&quot;}" data-vc-request="http://dcsi.labs.roweb.ro/wp-admin/admin-ajax.php" data-vc-post-id="3506" data-vc-public-nonce="c3df3a5059">
+	</div>
+</div><!-- vc_grid end -->
+</div></div></div></div></div><div id="fws_598445d654223" class="wpb_row vc_row vc_row-fluid  animate_onoffset row-dynamic-el section-style    normal " style="background-color: #f6f6f6; padding-top: 90px ; padding-bottom: 90px ; "><div  style="position: absolute;top: 0;"></div><div class="container  dark"><div class="section_clear"><div class="wpb_column column_container with_padding wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner  "  style="padding:" data-animation="none" data-delay=""><div class="wpb_wrapper"><div class="wpb_content_element block_title section_title inner-only_text "><h1>Latest News</h1></div><div class="vc_empty_space"  style="height: 35px" ><span class="vc_empty_space_inner"></span></div>
+
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               
+                                                                                                 
+                                                                    
+                               <div class="latest_blog wpb_content_element boxed"><div class="blog_slider owl-carousel"  data-slidenr="3"><div class=" blog-article grid-style blog-item  "><div class="media"></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2017/02/09/hello-world/">Hello world!</a></h3><ul class="info"><li>Posted by fabiana</li><li>On February 9, 2017</li></ul><div class="text">Welcome to WordPress. This is your first post. Edit or delete it, then start writing!</div><a href="http://dcsi.labs.roweb.ro/2017/02/09/hello-world/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>1 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="1" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/06/02/unlimited-possibilities/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/06/coffee-desk-laptop-notebook-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/06/02/unlimited-possibilities/">Unlimited Possibilities</a></h3><ul class="info"><li>Posted by fabiana</li><li>On June 2, 2016</li></ul><div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text...</div><a href="http://dcsi.labs.roweb.ro/2016/06/02/unlimited-possibilities/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="4364" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/06/02/more-unique-design/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/06/magazines-desk-work-workspace-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/06/02/more-unique-design/">More Unique Design</a></h3><ul class="info"><li>Posted by fabiana</li><li>On June 2, 2016</li></ul><div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text...</div><a href="http://dcsi.labs.roweb.ro/2016/06/02/more-unique-design/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="4359" title=""><i class="linecon-icon-heart"></i>1 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/06/02/gallery-format-post/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/06/pexels-photo-27458-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/06/02/gallery-format-post/">Gallery Format Post</a></h3><ul class="info"><li>Posted by fabiana</li><li>On June 2, 2016</li></ul><div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text...</div><a href="http://dcsi.labs.roweb.ro/2016/06/02/gallery-format-post/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="4343" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/06/02/default-post-layout/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/06/red-hands-woman-creative-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/06/02/default-post-layout/">Default Post Layout</a></h3><ul class="info"><li>Posted by fabiana</li><li>On June 2, 2016</li></ul><div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text...</div><a href="http://dcsi.labs.roweb.ro/2016/06/02/default-post-layout/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="4334" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/06/02/simplicity-is-my-choice/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/06/pexels-photo-54283-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/06/02/simplicity-is-my-choice/">Simplicity is my choice</a></h3><ul class="info"><li>Posted by fabiana</li><li>On June 2, 2016</li></ul><div class="text">Lorem ipsum dolor sit amet, vim ei quidam nominati, dicat mediocritatem pri ex, vix zril labore ei. Fuisset volumus luptatum eu...</div><a href="http://dcsi.labs.roweb.ro/2016/06/02/simplicity-is-my-choice/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="4331" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/04/26/customize-all-elements/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/04/macbook-mockup-hero-ping-pong-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/04/26/customize-all-elements/">Customize all elements</a></h3><ul class="info"><li>Posted by fabiana</li><li>On April 26, 2016</li></ul><div class="text">Lorem ipsum dolor sit amet, te ridens gloriatur temporibus qui, per enim veritus probatus ad. Quo eu etiam exerci dolore, usu...</div><a href="http://dcsi.labs.roweb.ro/2016/04/26/customize-all-elements/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>1 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="3408" title=""><i class="linecon-icon-heart"></i>1 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/04/26/the-simple-the-only-theme-you-need/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/04/coffee-1250405_1920-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/04/26/the-simple-the-only-theme-you-need/">The only theme you need</a></h3><ul class="info"><li>Posted by fabiana</li><li>On April 26, 2016</li></ul><div class="text">Lorem ipsum dolor sit amet, te ridens gloriatur temporibus qui, per enim veritus probatus ad. Quo eu etiam exerci dolore, usu...</div><a href="http://dcsi.labs.roweb.ro/2016/04/26/the-simple-the-only-theme-you-need/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="3406" title=""><i class="linecon-icon-heart"></i>1 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/04/20/how-to-set-a-blog/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/04/smartphone-925758_1920-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/04/20/how-to-set-a-blog/">How to setup a blog</a></h3><ul class="info"><li>Posted by fabiana</li><li>On April 20, 2016</li></ul><div class="text">Lorem ipsum dolor sit amet, te ridens gloriatur temporibus qui, per enim veritus probatus ad. Quo eu etiam exerci dolore, usu...</div><a href="http://dcsi.labs.roweb.ro/2016/04/20/how-to-set-a-blog/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="6285" title=""><i class="linecon-icon-heart"></i>1 likes</a><span class="jm-load"></span></div></div></div><div class=" blog-article grid-style blog-item  "><div class="media"><a href="http://dcsi.labs.roweb.ro/2016/04/20/12-different-blog-styles/"><div class="overlay"><div class="post_type_circle"><i class="lnr lnr-magnifier"></i></div></div></a><img src="http://dcsi.labs.roweb.ro/wp-content/uploads/2016/04/photo-1456324463128-7ff6903988d8-compressed-825x600.jpg" alt=""></div><div class="content"><h3><a href="http://dcsi.labs.roweb.ro/2016/04/20/12-different-blog-styles/">12+ different blog styles</a></h3><ul class="info"><li>Posted by fabiana</li><li>On April 20, 2016</li></ul><div class="text">Lorem ipsum dolor sit amet, te ridens gloriatur temporibus qui, per enim veritus probatus ad. Quo eu etiam exerci dolore, usu...</div><a href="http://dcsi.labs.roweb.ro/2016/04/20/12-different-blog-styles/" class="btn-bt default"><span>Read More</span><i class="lnr lnr-arrow-right"></i></a><div class="latest_post_comments"><i class="icon-comment-o"></i>0 </div><div class="post-like"><a href="#" class="jm-post-like" data-post_id="6015" title=""><i class="linecon-icon-heart"></i>0 likes</a><span class="jm-load"></span></div></div></div></div></div></div></div></div></div></div></div>
+            
+             
+        
+
+
+</section>
+
+
+
+
+
+   
+
+ 
+
+</div>
+<!-- Footer -->
+ <a href="#" class="scrollup">Scroll</a> 
+    <div class="footer_wrapper">
+        
+        <footer id="footer" class="">
+
+            
+            
+
+        	<div class="inner">
+                        <div class="container">
+                	        	<div class="row-fluid ff">
+                    	<!-- widget -->
+    		        	                        
+                            <div class="span6">
+                            
+                                <div id="text-2" class="widget widget_text">			<div class="textwidget"><p><img src="http://dcsi.labs.roweb.ro//wp-content/uploads/2017/02/logo2.png" alt="" ></p>
+<p><span class="white">If you wish to get more details about our consulting services, please do not hesitate to</span> <span class="blue"> contact us</span></p>
+<p>Copyright &copy 2017 DCSI<br />
+Toate drepturile sunt rezervate</p>
+</div>
+		</div>                                
+                            </div>
+                                                
+                            <div class="span6">
+                            
+                                <div id="nav_menu-4" class="widget widget_nav_menu"><div class=" megamenu_container"><ul id="menu-footerdcsi" class="menu simple_megemenu dl-menu"><li id="menu-item-6821" class="menu-item menu-item-type-custom menu-item-object-custom" data-bg=""><a href="http://dcsi.labs.roweb.ro//identity-and-access-management/">Service</a></li>
+<li id="menu-item-7226" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/site-map/">Site Map</a></li>
+<li id="menu-item-7222" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-6824" class="menu-item menu-item-type-post_type menu-item-object-page" data-bg=""><a href="http://dcsi.labs.roweb.ro/about-us/">About us</a></li>
+</ul></div></div><div id="social_widget-7" class="widget social_widget"><ul class="footer_social_icons the-simple"><li class="facebook"><a href="https://www.facebook.com/ElleThemesWordpress/?fref=ts"><img src="http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/img/facebook.png"></li><li id="text">Find us on Facebook</li></a><li class="twitter"><a href="https://twitter.com/ElleThemes"><img src="http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/img/twitter.png"></li><li id="text">Follow us on Twitter</li></a></ul></div>                                
+                            </div>
+                            	            </div>
+
+    	                    </div>  
+            
+                                            <div class="bg-overlay" style="background:rgba(26, 28, 30, 0.88)"></div>
+              
+
+            </div>
+            
+                    </footer>
+    </div>
+    <!-- #footer -->
+
+</div>
+		<script type="text/javascript">
+			function revslider_showDoubleJqueryError(sliderID) {
+				var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+				errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+				errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+				errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+				errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+					jQuery(sliderID).show().html(errorMessage);
+			}
+		</script>
+		<link rel='stylesheet' id='prettyphoto-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/prettyphoto/css/prettyPhoto.min.css?ver=5.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='vc_pageable_owl-carousel-css-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/assets/owl.min.css?ver=5.0.1' type='text/css' media='' />
+<link rel='stylesheet' id='animate-css-css'  href='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/bower/animate-css/animate.min.css?ver=5.0.1' type='text/css' media='' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_var = {"url":"http:\/\/dcsi.labs.roweb.ro\/wp-admin\/admin-ajax.php","nonce":"e47b2d8fb2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/post-like.js?ver=1.0'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/bootstrap.min.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/jquery.easing.1.3.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/jquery.easy-pie-chart.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/smoothscroll.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/waypoints.min.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/odometer.min.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/jquery.appear.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/modernizr.custom.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/simple-animations.js?ver=1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var s_gb = {"theme_js":"http:\/\/dcsi.labs.roweb.ro\/wp-content\/themes\/the-simple\/js\/","theme_fancy":"http:\/\/dcsi.labs.roweb.ro\/wp-content\/themes\/the-simple\/fancybox\/source\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/simple-main.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/comment-reply.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/themes/the-simple/js/classie.js?ver=1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/wp-embed.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/prettyphoto/js/jquery.prettyPhoto.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/owl-carousel2-dist/owl.carousel.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/bower/imagesloaded/imagesloaded.pkgd.min.js?ver=4.7.2'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/lib/waypoints/waypoints.min.js?ver=5.0.1'></script>
+<script type='text/javascript' src='http://dcsi.labs.roweb.ro/wp-content/plugins/js_composer/assets/js/dist/vc_grid.min.js?ver=5.0.1'></script>
+
+
+<!-- Snap Drawer -->
+<!--</div>-->
+<!-- Snap Drawer -->
+</body>
+</html>

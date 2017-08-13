@@ -1,0 +1,127 @@
+@import eu.dcsi.sekyll.docs.BlogSummary
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(implicit context: LagomContext)
+ 
+@main(Some("Microservices Framework"))()() {
+  
+    <div class="fw-wrapper lgm-purple hero-banner">
+  
+        <div class="row">
+            <div class="small-12 columns">
+                <a href="@context.path/" class="logo"><img src="@context.path/images/logos/lagom-reverse.svg"></a>
+                <h1>The Opinionated Microservices Framework<br>
+                for moving away from the Monolith</h1>
+            </div>
+        </div>
+    </div>
+
+    <article class="fw-wrapper lb-light-grey-ltr home-content">
+        <header class="row meet-lagom">
+            <div class="small-12 medium-10 large-8 small-centered columns text-left">
+                <h1>Meet Lagom</h1>
+                <p>The Lagom framework includes Java and Scala APIs to simplify development of 
+                  microservices. Lagom's integrated development environment accelerates 
+                  development &#8212; by allowing you to focus on solving business problems 
+                  instead of wiring services together. 
+                  A single command builds the project and starts all of your services 
+                   as well as the supporting Lagom infrastructure, which includes a web server for testing. The environment hot-reloads services when you change your code.</p>
+                   
+                 
+                  <p>Lagom is built on top of Akka and Play, proven technologies that are in production today, delivering scalability and resilience to 
+                  some of the most demanding applications on the web. While Lagom is open source, you can adopt it with confidence knowing that Lightbend offers subscriptions for support, assistance during development, and access to additional tools for deployment and monitoring. 
+                <p>Watch the 3-minute <i>Meet Lagom</i> video below, or try Lagom yourself. <a class="" href="@context.path/get-started.html" target="_blank">Create a Lagom project and test a simple Hello World service</a> in just a few minutes.</p>
+                <div class="flex-video widescreen">
+                    <iframe id="player" class="youtube-embed-player" src="//www.youtube.com/embed/d1jT0UOVx9U?rel=0&amp;autohide=1&amp;modestbranding=0&amp;showinfo=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </header>
+        <div class="row get-started">
+            <div class="small-12 small-centered columns text-center">
+                <h1>Learn more</h1>
+                <p>View introductory videos below or browse  
+                  <a class="" href="@context.path/documentation/" target="_blank">Lagom documentation</a>.</p>
+            </div>
+        </div>
+
+        <div class="row video-repeater">
+            <div class="small-12 medium-6 large-5 medium-push-6 large-push-7 columns">
+                <h1>Introduction To Lagom</h1>
+                <h3>With James Roper (14 Min)</h3>
+                <p>Services are asynchronous. Intra-service communication is managed for you. Streaming is out of the box. Your microservices are resilient by nature.</p>
+                <br>
+            </div>
+            <div class="small-12 medium-6 large-7 medium-pull-6 large-pull-5 columns">
+                <div class="flex-video widescreen">
+                    <iframe id="player" class="youtube-embed-player" src="//www.youtube.com/embed/D9y2Ex3NN34?rel=0&amp;autohide=1&amp;modestbranding=0&amp;showinfo=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row video-repeater">
+            <div class="small-12 medium-6 large-5 columns medium-text-right">
+                <h1>Developer Setup</h1>
+                <h3>With Mirco Dotta (11 Min)</h3>
+                <p>Development is familiar. Use your favorite IDE and favorite dependency injection tools. You leverage the old to build something new.</p>
+                <br>
+            </div>
+            <div class="small-12 medium-6 large-7 columns">
+                <div class="flex-video widescreen">
+                    <iframe id="player" class="youtube-embed-player" src="//www.youtube.com/embed/1cOqYMe-Zm0?rel=0&amp;autohide=1&amp;modestbranding=0&amp;showinfo=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row video-repeater vertical-buffer-bottom-60">
+            <div class="small-12 medium-6 large-5 medium-push-6 large-push-7 columns">
+                <h1>Managing Data Persistence</h1>
+                <h3>With Patrik Nordwall (16 Min)</h3>
+                <p>Systems are distributed. Akka Cluster and Akka Persistence are under the hood. Cluster sharding is implicit. CQRS and event sourcing is made trivially easy. Your systems are cloud ready and elastic.</p>
+            </div>
+            <div class="small-12 medium-6 large-7 medium-pull-6 large-pull-5 columns">
+                <div class="flex-video widescreen">
+                    <iframe id="player" class="youtube-embed-player" src="//www.youtube.com/embed/yj581pSRflQ?rel=0&amp;autohide=1&amp;modestbranding=0&amp;showinfo=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row video-repeater vertical-buffer-bottom-60">
+            <div class="small-12 medium-6 large-5 columns medium-text-right">
+                <h1>Lagom ConductR Deployment</h1>
+                <h3>With Christopher Hunt (13 Min)</h3>
+                <p>Deployment is seamless. Your services are already set up for production. With one command, you safely scale out in production.</p>
+            </div>
+            <div class="small-12 medium-6 large-7 columns">
+                <div class="flex-video widescreen">
+                    <iframe id="player" class="youtube-embed-player" src="//www.youtube.com/embed/0Z0UIZxW1aw?rel=0&amp;autohide=1&amp;modestbranding=0&amp;showinfo=1" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </article>
+    <aside class="fw-wrapper home-blog-listing">
+        <header class="row">
+            <div class="small-12 columns">
+                <h1><a href="blog">Lagom Team Blog</a></h1>
+            </div>
+        </header>
+        <div class="row home-blog-list">
+            <div class="columns small-12">
+            <h3>Recent posts</h3>
+            @for(blogPost <- context.blogSummary.recent) {
+                <div class="blog-meta">
+                    <div class="blog-author-image">
+                        <a href="@blogPost.author.url">
+                            <img src="@blogPost.author.avatar"/>
+                        </a>
+                    </div>
+                    <div class="blog-meta-details">
+                        <a href="@context.path/blog/@{blogPost.id}.html">@blogPost.title</a>
+                        <br/>
+                        @blogPost.date.toString("MMMM d, yyyy")
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </aside>
+}

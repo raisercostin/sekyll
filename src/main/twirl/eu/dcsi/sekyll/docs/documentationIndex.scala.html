@@ -1,0 +1,77 @@
+@import eu.dcsi.sekyll.docs.VersionSummary
+@import eu.dcsi.sekyll.docs.CommunityContent
+@import eu.dcsi.sekyll.docs.Version
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(stableVersions: Seq[VersionSummary], previewVersions: Seq[VersionSummary], oldVersions: Seq[VersionSummary], versions: Seq[Version], communityContents: Seq[CommunityContent])(implicit ctx: LagomContext)
+
+@toTitleCase(s: String) = {@s.head.toUpper@s.tail}
+
+@renderVersion(summary: VersionSummary) = {
+    <h3>@summary.title</h3>
+    @for(version <- versions.find(_.name == summary.name)) {
+        <ul>
+        @for(lang <- version.languages) {
+            <li>@toTitleCase(lang.language): <a href="@ctx.path/documentation/@version.name/@lang.language/Home.html">Reference manual</a> and <a href="@ctx.path/documentation/@version.name/@lang.language/api/index.html">API docs</a>.</li>
+            }
+        </ul>
+    }
+}
+
+@renderContent(communityContents: Seq[CommunityContent]) = {
+    <ul>
+    @for(cc <- communityContents) {
+        <li>@{cc.description} (<a href="@cc.href">@cc.hrefTitle</a>)</li>
+    }
+    </ul>
+}
+
+@page("Documentation") {
+    <h1>Release versions</h1>
+
+    <p>
+        Release versions are stable versions that continue to be maintained, and are
+            <a href="https://www.lightbend.com/platform/subscription">supported commercially by Lightbend</a>.
+    </p>
+
+    @for(stableVersion <- stableVersions) {
+        @renderVersion(stableVersion)
+    }
+
+    @if(previewVersions) {
+        <h1>Preview versions</h1>
+
+        <p>
+            Documentation previews for upcoming releases.
+        </p>
+
+        @for(previewVersion <- previewVersions) {
+            @renderVersion(previewVersion)
+        }
+    }
+
+    @if(oldVersions) {
+        <h1>Old versions</h1>
+
+        <p>
+            Old versions are no longer maintained.
+        </p>
+
+        @for(oldVersion <- oldVersions) {
+            @renderVersion(oldVersion)
+        }
+    }
+
+    @if(communityContents) {
+        <h1>Community Content</h1>
+
+        <p>
+            Blog posts, webinars, tutorials and other content provided by the community.
+        </p>
+
+        @renderContent(communityContents)
+
+    }
+
+
+}

@@ -1,0 +1,13 @@
+/target/
+/target2/
+/.idea
+/bin/
+._
+.cache-main
+.classpath
+.project
+.settings
+*.DS_Store
+public/
+/project/target/
+/project/project/

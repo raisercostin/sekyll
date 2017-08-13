@@ -1,0 +1,56 @@
+@import eu.dcsi.sekyll.docs.svg.html._
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(implicit context: LagomContext)
+
+@main(Some("Try Now"))()() {
+    <div class="fw-wrapper lgm-purple hero-banner">
+        <div class="row">
+            <div class="small-12 columns">
+                <a href="@context.path/" class="logo"><img src="@context.path/images/logos/lagom-reverse.svg"></a>
+                <h1>Try Lagom @context.currentLagomVersion today</h1>
+                <a href="@context.path/changelog.html">Change log</a>
+            </div>
+        </div>
+    </div>
+    <article class="download-content">
+        <section class="fw-wrapper">
+            <div class="row">
+                <div class="small-12 columns">
+                    <h2>It’s quick and easy to get started with Lagom</h2>
+                    <p>
+                        Industry-standard build tools automatically download what you need to get started developing a Lagom system.
+                        Use a Maven archetype or an sbt template to create a new project with a simple Hello World service that you can test in your browser.
+                        No need to download or set up anything else!
+                    </p>
+
+                    <p>
+                        One simple command starts the Lagom development environment and runs:
+                    <ul>
+                        <li>Cassandra</li>
+                        <li>Kafka</li>
+                        <li>A service locator</li>
+                        <li>A service gateway</li>
+                        <li>Your Lagom services</li>
+                    </ul></p>
+
+                    <p>
+                        Lagom provides APIs for Java and Scala.
+                        Both support the full range of Lagom features to provide a great microservice development experience.
+                    </p>
+                    <p></p>
+
+                    
+                         <div class="small-12 columns">
+                    <div class="get-started-buttons">
+                      <h5 align="center">Choose your language:</h5>
+                        <a class="lagom-logo-button" href="@context.path/get-started-java.html">Java</a>
+                        <a class="lagom-logo-button" href="@context.path/get-started-scala.html">Scala</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+    </article>
+
+}

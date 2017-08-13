@@ -1,0 +1,20 @@
+@import eu.dcsi.sekyll.docs.VersionSummary
+@import eu.dcsi.sekyll.docs.Version
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(version: Version)(implicit ctx: LagomContext)
+
+@toTitleCase(s: String) = {@s.head.toUpper@s.tail}
+
+@page(s"Lagom ${version.name} documentation") {
+
+    @for(lang <- version.languages) {
+        <h3>@toTitleCase(lang.language)</h3>
+
+        <ul>
+            <li><a href="@ctx.path/documentation/@version.name/@lang.language/Home.html">Reference manual</a></li>
+            <li><a href="@ctx.path/documentation/@version.name/@lang.language/api/index.html">API docs</a></li>
+        </ul>
+    }
+
+}

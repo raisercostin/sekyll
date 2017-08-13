@@ -1,0 +1,163 @@
+@import eu.dcsi.sekyll.docs.svg.html._
+@import eu.dcsi.sekyll.docs.LagomContext
+
+@(title: Option[String], canonical: Option[String] = None)(header: Html = HtmlFormat.empty)(footer: Html = HtmlFormat.empty)(content: Html)(implicit context: LagomContext)
+<!DOCTYPE html>
+<html class="noios">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lagom@title.map(" - " + _)</title>
+        <meta name="description" content="Lagom">
+        @for(url <- canonical) {
+            <link rel="canonical" href="@url"/>
+        }
+        <meta name="viewport" content="width=device-width,maximum-scale=1"/>
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="@context.path/@context.assetFingerPrint-all-styles-concat.css" type="text/css">
+        @header
+    </head>
+    <body>
+    	@eu.dcsi.website.part.html.menu()
+    	@content
+    @* 
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas >
+                    <nav>
+                        <button class="close-button" aria-label="Close menu" type="button" data-close>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <a href="@context.path/get-started.html">Try Lagom</a>
+                        @sideNav()
+                    </nav>
+                </div>
+                <div class="off-canvas-content" data-off-canvas-content>
+                    <header class="navbar show-for-medium">
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <button class="menu-icon hide-for-medium" type="button" data-open="offCanvasLeft" data-toggle="offCanvas"></button>
+                                <a class="logo" href="@context.path/">@lagomFullColor()</a>
+                                <nav class="sections show-for-medium">
+                                    @topNav()
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="fw-wrapper flush social-bar">
+                        <div class="row hide-for-medium">
+                            <div class="small-12 columns">
+                                <button class="menu-icon" type="button" data-open="offCanvasLeft" data-toggle="offCanvas"></button>
+                                <a class="logo-for-small" href="@context.path/">@lagomReverse()</a>
+                            </div>
+                        </div>
+                        <div class="row show-for-medium">
+                            <div class="small-12 columns">
+                                <!-- social icons -->
+                                <a class="logo" href="@context.path/">@lagomReverse()</a>
+                                <nav class="social">
+                                    <a href="//groups.google.com/forum/#!forum/lagom-framework"><span>Mailing list</span></a>
+                                    <a href="//twitter.com/lagom"><span>Twitter</span></a>
+                                    <a href="//github.com/lagom/lagom"><span>Github</span></a>
+                                    <a href="//stackoverflow.com/questions/tagged/lagom"><span>Stackoverflow</span></a>
+                                </nav>
+                                <nav class="sections-scroll">
+                                    @topNav()
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    @content
+
+                    <footer>
+                        <section class="fw-wrapper lb-grey-dkr support">
+                            <div class="row">
+                                <div class="small-12 medium-6 columns">
+                                    @chat()
+                                    <h3>Community support</h3>
+                                    <ul>
+                                        <li><a href="//groups.google.com/forum/#!forum/lagom-framework">Mailing list</a></li>
+                                        <li><a href="//stackoverflow.com/questions/tagged/lagom">Stackoverflow</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 columns">
+                                    @lightbendIconReverse()
+                                    <h3>Professional support</h3>
+                                    <ul>
+                                        <li><a href="//www.lightbend.com/services/expert-support">Lightbend Subscription</a></li>
+                                        <li><a href="//www.lightbend.com/services/training">Training</a></li>
+                                        <li><a href="//www.lightbend.com/services/consulting">Consulting</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="fw-wrapper lb-grey links">
+                            <div class="row">
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Lagom</h3>
+                                    <ul class="no-bullet">
+                                        <li><a href="@context.path/get-started.html">Get started</a></li>
+                                        <li><a href="@context.path/blog">Blog</a></li>
+                                        <li><a href="@context.path/documentation/">Documentation</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Community links</h3>
+                                    <ul>
+                                        <li><a href="//www.eventbrite.com/directory/?q=lagom&amp;loc=Worldwide">Events <em>via Eventbrite</em></a></li>
+                                        <li><a href="http://www.indeed.com/jobs?q=%22lagom%22&amp;l=">Jobs <em>via Indeed</em></a></li>
+                                        <li><a href="http://www.scoop.it/lagom">Blogs <em>via Scoop.it</em></a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Code &amp; contribution</h3>
+                                    <ul>
+                                        <li><a href="//github.com/lagom/lagom/issues">Bug tracker <em>GitHub</em></a></li>
+                                        <li><a href="@context.path/get-involved.html">Get involved</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Social networks</h3>
+                                    <ul>
+                                        <li><a href="//twitter.com/lagom"><span>Twitter</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="fw-wrapper lgm-purple-dkr credits">
+                            <div class="row">
+                                <div class="small-12 medium-3 columns">
+                                    <a href="@context.path/" class="logo"><img src="@context.path/images/logos/lagom-reverse.svg"></a>
+                                </div>
+                                <div class="small-12 medium-3 columns">
+                                    <a href="//lightbend.com" class="partner"><img src="@context.path/images/logos/lightbend-reverse.svg"></a>
+                                </div>
+                                <div class="small-12 medium-6 columns">
+                                    <p>Lagom is released under the Apache 2 License</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+	*@
+    </body>
+    <script src="@context.path/@context.assetFingerPrint-all-scripts-concat.js"></script>
+    @* Footer needs to be before GA, so that page experiments load first which ensure that GA can track them *@
+    @footer
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-84991267-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+</html>
