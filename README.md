@@ -1,8 +1,4 @@
-# !! Notice !!
-This fork was moved to start a completely new project at https://github.com/raisercostin/sekyll
-
-Sekyll = Scala jekyll - because jekyll breaks the Principle of Least Surprise way too often.
-The lagom/lagom.github.io contains a lot of generated content: site and java docs. Besides is focused on generating the site for lagom.
+A sample site generated with this: http://raisercostin.org/sekyll-docs/contact.html
 
 # Sekyll
 
@@ -113,3 +109,9 @@ The `tags` field can be used to specify a space separated list of tags. Multi-wo
 
 The remainder of the file is the blog post. You can preview your blog post by following the [Developing the website](#developing-the-website) instructions above.
 
+
+# Thanks
+
+This project started as a fork of https://github.com/lagom/lagom.github.io
+
+This project exists because [lagom site generator](https://github.com/lagom/lagom.github.io) project contains a lot of generated content: site and java docs and is focused on generating the site for lagom.

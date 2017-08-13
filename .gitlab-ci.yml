@@ -4,8 +4,10 @@ pages:
   stage: deploy
   script:
   - echo "starting static noop script"
+  - mkdir public
+  - cp -rp docs public
   artifacts:
     paths:
-    - docs/
+    - public
   only:
   - master

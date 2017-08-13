@@ -147,14 +147,14 @@ generateHtml <<= Def.taskDyn {
 def path(segments: String*): String =  segments.mkString(java.io.File.separator)
 
 Concat.groups := Seq(
-  s"$assetFingerPrint-all.css" -> group(Seq(
+  s"css/all-$assetFingerPrint.css" -> group(Seq(
       path("lib", "tether", "css", "tether.css"),
       path("lib", "bootstrap", "css", "bootstrap.css"),
       path("lib", "font-awesome", "css", "font-awesome.css"),
       path("css", "main.css"),
       path("css", "modern-business.css")
   )),
-  s"$assetFingerPrint-all.js" -> group(Seq(
+  s"js/all-$assetFingerPrint.js" -> group(Seq(
     path("lib", "jquery", "jquery.js"),
     path("lib", "popper.js", "dist", "umd", "popper.js"),
     path("lib", "tether", "js", "tether.js"),
