@@ -12,16 +12,22 @@ WebKeys.stagingDirectory := file("docs")
 cleanFiles <+= baseDirectory { base => base / "docs" }
 
 libraryDependencies ++= Seq(
-  "org.webjars" % "normalize.css" % "3.0.2",
-  "org.webjars" % "foundation" % "6.2.0",
-  "org.webjars" % "jquery" % "2.2.1",
-  "org.webjars.bower" % "waypoints" % "4.0.0",
-  "org.webjars" % "prettify" % "4-Mar-2013",
-  "org.webjars" % "bootstrap" % "4.0.0-alpha.6-1",
-  "org.webjars" % "font-awesome" % "4.7.0",
+/*
+    "org.webjars" % "normalize.css" % "3.0.2",
+    "org.webjars" % "foundation" % "6.2.0",
+    "org.webjars.bower" % "waypoints" % "4.0.0",
+    "org.webjars" % "prettify" % "4-Mar-2013",
+*/
 
-  "com.lightbend.markdown" %% "lightbend-markdown-server" % "1.5.2",
-  "org.yaml" % "snakeyaml" % "1.12"
+    //used in pages
+    "org.webjars" % "font-awesome" % "4.7.0"
+        ,"org.webjars" % "bootstrap" % "4.0.0-alpha.6-1" //"4.0.0-beta"
+        ,"org.webjars.npm" % "popper.js" % "1.11.1"
+        ,"org.webjars" % "tether" % "1.4.0"
+    ,"org.webjars" % "jquery" % "2.2.1" //3.2.1
+  
+    ,"com.lightbend.markdown" %% "lightbend-markdown-server" % "1.5.2"
+    ,"org.yaml" % "snakeyaml" % "1.12"
 )
 
 resolvers += Resolver.bintrayIvyRepo("typesafe", "ivy-releases")
@@ -142,15 +148,23 @@ def path(segments: String*): String =  segments.mkString(java.io.File.separator)
 
 Concat.groups := Seq(
   s"$assetFingerPrint-all.css" -> group(Seq(
+      path("lib", "tether", "css", "tether.css"),
       path("lib", "bootstrap", "css", "bootstrap.css"),
       path("lib", "font-awesome", "css", "font-awesome.css"),
-      path("main.css")
+      path("css", "main.css"),
+      path("css", "modern-business.css")
   )),
   s"$assetFingerPrint-all.js" -> group(Seq(
+    path("lib", "jquery", "jquery.js"),
+    path("lib", "popper.js", "dist", "umd", "popper.js"),
+    path("lib", "tether", "js", "tether.js"),
     path("lib", "bootstrap", "js", "bootstrap.js"),
-    path("js", "main.js")
-  )),
-
+    path("js", "main.js"),
+    path("js", "contact_me.js"),
+    path("js", "jqBootstrapValidation.js")
+  ))
+  /*
+  ,
   s"$assetFingerPrint-all-styles-concat.css" -> group(Seq(
       path("lib", "foundation", "dist", "foundation.min.css"),
       path("lib", "prettify", "prettify.css"),
@@ -165,6 +179,7 @@ Concat.groups := Seq(
     path("lib", "prettify", "lang-scala.js"),
     "main.min.js"
   ))
+  */
 )
 
 StylusKeys.compress := true

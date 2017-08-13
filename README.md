@@ -8,8 +8,11 @@ The lagom/lagom.github.io contains a lot of generated content: site and java doc
 
 ## How it works
 
-Everything in `public/` is published at raisercostin.gitlab.io .
-The content in `public` is a manual copy of a `target/web/stage`.
+Everything in `docs/` is published at raisercostin.gitlab.io .
+The content in `docs` is a manual copy of a `target/web/stage`.
+
+Publish on
+- github.com - See https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
 
 ## Generating site locally
 
@@ -32,7 +35,7 @@ The build is made with `sbt`.
 
 ## ToDo
 - publish at http://sekyll.gitlab.io and http://sekyll.github.io
-- generate directly in `public/` not in `target/web/stage`
+- generate directly in `docs/` not in `target/web/stage`
 - switch from style and sass to less as less has native compilation in sbt.
 - cleanup
 - deploy command to release static site to
