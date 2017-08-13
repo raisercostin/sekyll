@@ -72,10 +72,11 @@ object DocumentationGenerator extends App {
   // of the repo
   val gitHubAccount: Option[String] = None
 
-  val (baseUrl, context) = gitHubAccount match {
-    case Some(account) => (s"http://$account.github.io/lagom.github.io", "/lagom.github.io")
-    case None => ("https://www.lagomframework.com", "")
-  }
+  val (baseUrl, context) = ("http://raisercostin.org/sekyll-docs","/sekyll-docs")
+    //gitHubAccount match {
+    //case Some(account) => (s"http://$account.github.io/lagom.github.io", "/lagom.github.io")
+    //case None => ("https://www.lagomframework.com", "")
+  //}
 
   // Templated pages to generate
   val templatePages: Seq[(String, Template1[LagomContext, Html])] = Seq(
