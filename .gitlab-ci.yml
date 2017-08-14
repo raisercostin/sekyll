@@ -1,3 +1,4 @@
+#gitlab scritps
 image: alpine:latest
 
 pages:

@@ -1,0 +1,456 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="noios">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Lagom - Lagom Change Log</title>
+        <meta name="description" content="Lagom">
+        
+        <meta name="viewport" content="width=device-width,maximum-scale=1"/>
+        <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="/sekyll-docs/0.1-all-styles-concat.css" type="text/css">
+        
+    </head>
+    <body>
+        <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+                <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas >
+                    <nav>
+                        <button class="close-button" aria-label="Close menu" type="button" data-close>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <a href="/sekyll-docs/get-started.html">Try Lagom</a>
+                        
+
+<h3>Documentation</h3>
+<ul>
+    <li><a href="/sekyll-docs/get-started.html">Get started</a></li>
+    <li><a href="/sekyll-docs/documentation/">Full documentation</a></li>
+    <li><a href="/sekyll-docs/blog">Blog</a></li>
+</ul>
+<h3>Find help</h3>
+<ul>
+    <li><a href="https://gitter.im/lagom/lagom">Gitter channel</a></li>
+    <li><a href="https://stackoverflow.com/questions/tagged/lagom">Stack overflow</a></li>
+    <li><a href="https://www.lightbend.com/services/expert-support">Professional support</a></li>
+</ul>
+<h3>Contribute</h3>
+<ul>
+    <li><a href="/sekyll-docs/get-involved.html">Get involved</a></li>
+    <li><a href="/sekyll-docs/conduct.html">Code of conduct</a></li>
+    <li><a href="/sekyll-docs/community-process.html">Community process</a></li>
+    <li><a href="/sekyll-docs/contributing.html">Contributor guidelines</a></li>
+</ul>
+<h3>Programs</h3>
+<ul>
+    <li><a href="/sekyll-docs/outreachy/round14.html">Outreachy</a></li>
+</ul>
+
+                    </nav>
+                </div>
+                <div class="off-canvas-content" data-off-canvas-content>
+                    <header class="navbar show-for-medium">
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <button class="menu-icon hide-for-medium" type="button" data-open="offCanvasLeft" data-toggle="offCanvas"></button>
+                                <a class="logo" href="/sekyll-docs/"><svg id="Lagom_Full_Color" class="svg-logo svg-logo-lagom-full-color" data-name="Lagom Full Color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 192"><title>logom</title><g id="Lagom"><path d="M291.58,31.79h19.83v87.91c0,8.1,2.64,11.57,9.91,11.57a21.11,21.11,0,0,0,5.95-.66V148.3a35.63,35.63,0,0,1-9.42,1c-17.52,0-26.28-8.92-26.28-26.94V31.79Z" fill="#652b7c"/><path d="M398.34,75.75V63.69h19.83v58.17c0,7.11,1.65,9.75,6.11,9.75a41.28,41.28,0,0,0,4.13-.33v16a28.65,28.65,0,0,1-9.75,1.32c-4.79,0-8.59-.83-11.57-2.64a15.33,15.33,0,0,1-6.78-10.08C394.53,144.66,385,149,371.73,149A39.58,39.58,0,0,1,342,136.4c-7.93-8.43-11.9-18.67-11.9-31.07s4-22.64,11.9-30.9a39.58,39.58,0,0,1,29.75-12.56C385.12,61.87,395.2,67.82,398.34,75.75Zm-5.95,47.76a24.29,24.29,0,0,0,7.44-18.18,24.29,24.29,0,0,0-7.44-18.18,24.68,24.68,0,0,0-18-7.27,23.93,23.93,0,0,0-17.68,7.27c-4.63,4.79-6.94,10.91-6.94,18.18s2.31,13.39,6.94,18.18a23.93,23.93,0,0,0,17.68,7.27A24.68,24.68,0,0,0,392.39,123.51Z" fill="#652b7c"/><path d="M495.67,63.69H515.5v69.41c0,20-2.81,32.23-14,41-7.93,6.11-17.68,9.25-29.42,9.25-15.53,0-28.92-4-40.32-12.06l9.59-14.71a50.47,50.47,0,0,0,28.59,9.09q11.65,0,18.34-5c5.29-3.8,7.93-10.91,7.93-21.15v-4.13c-4,7.11-13.88,12.23-27.1,12.23a40.53,40.53,0,0,1-29.75-12.23c-7.93-8.1-11.9-18.34-11.9-30.41s4-22.31,12.06-30.57a39.23,39.23,0,0,1,29.58-12.56c13.72,0,23.8,5.78,26.61,13.88V63.69ZM489.72,123a24.19,24.19,0,0,0,7.44-18,23.82,23.82,0,0,0-7.44-17.85,24.68,24.68,0,0,0-18-7.27A23.93,23.93,0,0,0,454,87.15,24.69,24.69,0,0,0,447.09,105,25.08,25.08,0,0,0,454,123a23.79,23.79,0,0,0,17.68,7.11C478.81,130.12,484.93,127.81,489.72,123Z" fill="#652b7c"/><path d="M522.44,105.33a42.05,42.05,0,0,1,13.22-31.4c8.76-8.43,19.5-12.72,32.22-12.72s23.47,4.3,32.23,12.72a42.05,42.05,0,0,1,13.22,31.4,42.05,42.05,0,0,1-13.22,31.4c-8.76,8.43-19.5,12.72-32.23,12.72s-23.47-4.3-32.22-12.72A42.05,42.05,0,0,1,522.44,105.33ZM586.23,124a25.67,25.67,0,0,0,7.44-18.67,25,25,0,0,0-7.44-18.51,26.13,26.13,0,0,0-36.85,0,25.56,25.56,0,0,0-7.27,18.51A26.22,26.22,0,0,0,549.38,124,26.54,26.54,0,0,0,586.23,124Z" fill="#652b7c"/><path d="M620.6,147V63.69h19.67v11.9C643.74,67.49,652,62,662.58,62,674,62,681.91,66.83,686,76.58,690.84,66.83,699.76,62,712.81,62c18,0,28.42,12.72,28.42,33.38v26.28c0,6.44,1.16,8.76,5.62,8.76a14.56,14.56,0,0,0,2.81-.33v16.69a28.37,28.37,0,0,1-8.59,1c-13.05,0-19.5-7.27-19.5-21.81V98.23c0-11.4-5.29-18.51-14.54-18.51s-16,8.1-16,19.33V147H671.34V98.23c0-11.4-5.45-18.51-14.87-18.51-9.25,0-16.2,8.1-16.2,19.33V147H620.6Z" fill="#652b7c"/></g><g id="Icon"><path d="M261,84l-70,34,70,34S260.78,84.27,261,84Z" fill="#652b7c"/><polygon points="121 152 191 118 121 84 121 152" fill="#652b7c"/><path d="M191,118l70,34c-0.27,0-41.76,25-60.63,36.24a17.64,17.64,0,0,1-18,0C163.47,177,121,152,121,152Z" fill="#421540"/><path d="M200.23,47.65C219.09,58.88,261,84,261,84l-70,34L121,84c0.27,0,42.31-25.12,61.18-36.36A17.64,17.64,0,0,1,200.23,47.65Z" fill="#bf97c6"/><path d="M145,20.58l-35,17,35,17S144.89,20.72,145,20.58Z" fill="#652b7c"/><polygon points="75 54.58 110 37.58 75 20.58 75 54.58" fill="#652b7c"/><path d="M110,37.58l35,17c-0.14,0-20.88,12.5-30.31,18.12a8.82,8.82,0,0,1-9,0C96.23,67.08,75,54.58,75,54.58Z" fill="#421540"/><path d="M114.61,2.4C124,8,145,20.58,145,20.58l-35,17-35-17C75.14,20.59,96.16,8,105.59,2.4A8.82,8.82,0,0,1,114.61,2.4Z" fill="#bf97c6"/><path d="M101,91L51,115.54l50,24.53S100.84,91.21,101,91Z" fill="#652b7c"/><polygon points="1 140.07 51 115.54 1 91.02 1 140.07" fill="#652b7c"/><path d="M51,115.54l50,24.53c-0.19,0-29.83,18-43.3,26.14a12.5,12.5,0,0,1-12.89,0C31.34,158.1,1,140.07,1,140.07Z" fill="#421540"/><path d="M57.59,64.79C71.06,72.9,101,91,101,91L51,115.54,1,91C1.19,91,31.22,72.9,44.7,64.79A12.5,12.5,0,0,1,57.59,64.79Z" fill="#bf97c6"/></g></svg></a>
+                                <nav class="sections show-for-medium">
+                                    
+
+<a href="/sekyll-docs/get-started.html">Try Lagom</a>
+<a href="/sekyll-docs/documentation/">Documentation</a>
+<a href="/sekyll-docs/get-involved.html">Get Involved</a>
+<a href="/sekyll-docs/blog/">Blog</a>
+
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="fw-wrapper flush social-bar">
+                        <div class="row hide-for-medium">
+                            <div class="small-12 columns">
+                                <button class="menu-icon" type="button" data-open="offCanvasLeft" data-toggle="offCanvas"></button>
+                                <a class="logo-for-small" href="/sekyll-docs/"><svg id="Lagom_Reverse" class="svg-logo svg-logo-lagom-reverse" data-name="Lagom Reverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 192"><title>logom</title><g id="Lagom"><path d="M291.58,31.79h19.83v87.91c0,8.1,2.64,11.57,9.91,11.57a21.11,21.11,0,0,0,5.95-.66V148.3a35.63,35.63,0,0,1-9.42,1c-17.52,0-26.28-8.92-26.28-26.94V31.79Z" fill="#fff"/><path d="M398.34,75.75V63.69h19.83v58.17c0,7.11,1.65,9.75,6.11,9.75a41.28,41.28,0,0,0,4.13-.33v16a28.65,28.65,0,0,1-9.75,1.32c-4.79,0-8.59-.83-11.57-2.64a15.33,15.33,0,0,1-6.78-10.08C394.53,144.66,385,149,371.73,149A39.58,39.58,0,0,1,342,136.4c-7.93-8.43-11.9-18.67-11.9-31.07s4-22.64,11.9-30.9a39.58,39.58,0,0,1,29.75-12.56C385.12,61.87,395.2,67.82,398.34,75.75Zm-5.95,47.76a24.29,24.29,0,0,0,7.44-18.18,24.29,24.29,0,0,0-7.44-18.18,24.68,24.68,0,0,0-18-7.27,23.93,23.93,0,0,0-17.68,7.27c-4.63,4.79-6.94,10.91-6.94,18.18s2.31,13.39,6.94,18.18a23.93,23.93,0,0,0,17.68,7.27A24.68,24.68,0,0,0,392.39,123.51Z" fill="#fff"/><path d="M495.67,63.69H515.5v69.41c0,20-2.81,32.23-14,41-7.93,6.11-17.68,9.25-29.42,9.25-15.53,0-28.92-4-40.32-12.06l9.59-14.71a50.47,50.47,0,0,0,28.59,9.09q11.65,0,18.34-5c5.29-3.8,7.93-10.91,7.93-21.15v-4.13c-4,7.11-13.88,12.23-27.1,12.23a40.53,40.53,0,0,1-29.75-12.23c-7.93-8.1-11.9-18.34-11.9-30.41s4-22.31,12.06-30.57a39.23,39.23,0,0,1,29.58-12.56c13.72,0,23.8,5.78,26.61,13.88V63.69ZM489.72,123a24.19,24.19,0,0,0,7.44-18,23.82,23.82,0,0,0-7.44-17.85,24.68,24.68,0,0,0-18-7.27A23.93,23.93,0,0,0,454,87.15,24.69,24.69,0,0,0,447.09,105,25.08,25.08,0,0,0,454,123a23.79,23.79,0,0,0,17.68,7.11C478.81,130.12,484.93,127.81,489.72,123Z" fill="#fff"/><path d="M522.44,105.33a42.05,42.05,0,0,1,13.22-31.4c8.76-8.43,19.5-12.72,32.22-12.72s23.47,4.3,32.23,12.72a42.05,42.05,0,0,1,13.22,31.4,42.05,42.05,0,0,1-13.22,31.4c-8.76,8.43-19.5,12.72-32.23,12.72s-23.47-4.3-32.22-12.72A42.05,42.05,0,0,1,522.44,105.33ZM586.23,124a25.67,25.67,0,0,0,7.44-18.67,25,25,0,0,0-7.44-18.51,26.13,26.13,0,0,0-36.85,0,25.56,25.56,0,0,0-7.27,18.51A26.22,26.22,0,0,0,549.38,124,26.54,26.54,0,0,0,586.23,124Z" fill="#fff"/><path d="M620.6,147V63.69h19.67v11.9C643.74,67.49,652,62,662.58,62,674,62,681.91,66.83,686,76.58,690.84,66.83,699.76,62,712.81,62c18,0,28.42,12.72,28.42,33.38v26.28c0,6.44,1.16,8.76,5.62,8.76a14.56,14.56,0,0,0,2.81-.33v16.69a28.37,28.37,0,0,1-8.59,1c-13.05,0-19.5-7.27-19.5-21.81V98.23c0-11.4-5.29-18.51-14.54-18.51s-16,8.1-16,19.33V147H671.34V98.23c0-11.4-5.45-18.51-14.87-18.51-9.25,0-16.2,8.1-16.2,19.33V147H620.6Z" fill="#fff"/></g><g id="Icon"><g opacity="0.8"><path d="M261,84l-70,34,70,34S260.78,84.27,261,84Z" fill="#fff"/></g><g opacity="0.8"><polygon points="121 152 191 118 121 84 121 152" fill="#fff"/></g><path d="M191,118l70,34c-0.27,0-41.76,25-60.63,36.24a17.64,17.64,0,0,1-18,0C163.47,177,121,152,121,152Z" fill="#fff" opacity="0.6"/><path d="M200.23,47.65C219.09,58.88,261,84,261,84l-70,34L121,84c0.27,0,42.31-25.12,61.18-36.36A17.64,17.64,0,0,1,200.23,47.65Z" fill="#fff"/><g opacity="0.8"><path d="M145,20.58l-35,17,35,17S144.89,20.72,145,20.58Z" fill="#fff"/></g><g opacity="0.8"><polygon points="75 54.58 110 37.58 75 20.58 75 54.58" fill="#fff"/></g><path d="M110,37.58l35,17c-0.14,0-20.88,12.5-30.31,18.12a8.82,8.82,0,0,1-9,0C96.23,67.08,75,54.58,75,54.58Z" fill="#fff" opacity="0.6"/><path d="M114.61,2.4C124,8,145,20.58,145,20.58l-35,17-35-17C75.14,20.59,96.16,8,105.59,2.4A8.82,8.82,0,0,1,114.61,2.4Z" fill="#fff"/><g opacity="0.8"><path d="M101,91L51,115.54l50,24.53S100.84,91.21,101,91Z" fill="#fff"/></g><g opacity="0.8"><polygon points="1 140.07 51 115.54 1 91.02 1 140.07" fill="#fff"/></g><path d="M51,115.54l50,24.53c-0.19,0-29.83,18-43.3,26.14a12.5,12.5,0,0,1-12.89,0C31.34,158.1,1,140.07,1,140.07Z" fill="#fff" opacity="0.6"/><path d="M57.59,64.79C71.06,72.9,101,91,101,91L51,115.54,1,91C1.19,91,31.22,72.9,44.7,64.79A12.5,12.5,0,0,1,57.59,64.79Z" fill="#fff"/></g></svg></a>
+                            </div>
+                        </div>
+                        <div class="row show-for-medium">
+                            <div class="small-12 columns">
+                                <!-- social icons -->
+                                <a class="logo" href="/sekyll-docs/"><svg id="Lagom_Reverse" class="svg-logo svg-logo-lagom-reverse" data-name="Lagom Reverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 192"><title>logom</title><g id="Lagom"><path d="M291.58,31.79h19.83v87.91c0,8.1,2.64,11.57,9.91,11.57a21.11,21.11,0,0,0,5.95-.66V148.3a35.63,35.63,0,0,1-9.42,1c-17.52,0-26.28-8.92-26.28-26.94V31.79Z" fill="#fff"/><path d="M398.34,75.75V63.69h19.83v58.17c0,7.11,1.65,9.75,6.11,9.75a41.28,41.28,0,0,0,4.13-.33v16a28.65,28.65,0,0,1-9.75,1.32c-4.79,0-8.59-.83-11.57-2.64a15.33,15.33,0,0,1-6.78-10.08C394.53,144.66,385,149,371.73,149A39.58,39.58,0,0,1,342,136.4c-7.93-8.43-11.9-18.67-11.9-31.07s4-22.64,11.9-30.9a39.58,39.58,0,0,1,29.75-12.56C385.12,61.87,395.2,67.82,398.34,75.75Zm-5.95,47.76a24.29,24.29,0,0,0,7.44-18.18,24.29,24.29,0,0,0-7.44-18.18,24.68,24.68,0,0,0-18-7.27,23.93,23.93,0,0,0-17.68,7.27c-4.63,4.79-6.94,10.91-6.94,18.18s2.31,13.39,6.94,18.18a23.93,23.93,0,0,0,17.68,7.27A24.68,24.68,0,0,0,392.39,123.51Z" fill="#fff"/><path d="M495.67,63.69H515.5v69.41c0,20-2.81,32.23-14,41-7.93,6.11-17.68,9.25-29.42,9.25-15.53,0-28.92-4-40.32-12.06l9.59-14.71a50.47,50.47,0,0,0,28.59,9.09q11.65,0,18.34-5c5.29-3.8,7.93-10.91,7.93-21.15v-4.13c-4,7.11-13.88,12.23-27.1,12.23a40.53,40.53,0,0,1-29.75-12.23c-7.93-8.1-11.9-18.34-11.9-30.41s4-22.31,12.06-30.57a39.23,39.23,0,0,1,29.58-12.56c13.72,0,23.8,5.78,26.61,13.88V63.69ZM489.72,123a24.19,24.19,0,0,0,7.44-18,23.82,23.82,0,0,0-7.44-17.85,24.68,24.68,0,0,0-18-7.27A23.93,23.93,0,0,0,454,87.15,24.69,24.69,0,0,0,447.09,105,25.08,25.08,0,0,0,454,123a23.79,23.79,0,0,0,17.68,7.11C478.81,130.12,484.93,127.81,489.72,123Z" fill="#fff"/><path d="M522.44,105.33a42.05,42.05,0,0,1,13.22-31.4c8.76-8.43,19.5-12.72,32.22-12.72s23.47,4.3,32.23,12.72a42.05,42.05,0,0,1,13.22,31.4,42.05,42.05,0,0,1-13.22,31.4c-8.76,8.43-19.5,12.72-32.23,12.72s-23.47-4.3-32.22-12.72A42.05,42.05,0,0,1,522.44,105.33ZM586.23,124a25.67,25.67,0,0,0,7.44-18.67,25,25,0,0,0-7.44-18.51,26.13,26.13,0,0,0-36.85,0,25.56,25.56,0,0,0-7.27,18.51A26.22,26.22,0,0,0,549.38,124,26.54,26.54,0,0,0,586.23,124Z" fill="#fff"/><path d="M620.6,147V63.69h19.67v11.9C643.74,67.49,652,62,662.58,62,674,62,681.91,66.83,686,76.58,690.84,66.83,699.76,62,712.81,62c18,0,28.42,12.72,28.42,33.38v26.28c0,6.44,1.16,8.76,5.62,8.76a14.56,14.56,0,0,0,2.81-.33v16.69a28.37,28.37,0,0,1-8.59,1c-13.05,0-19.5-7.27-19.5-21.81V98.23c0-11.4-5.29-18.51-14.54-18.51s-16,8.1-16,19.33V147H671.34V98.23c0-11.4-5.45-18.51-14.87-18.51-9.25,0-16.2,8.1-16.2,19.33V147H620.6Z" fill="#fff"/></g><g id="Icon"><g opacity="0.8"><path d="M261,84l-70,34,70,34S260.78,84.27,261,84Z" fill="#fff"/></g><g opacity="0.8"><polygon points="121 152 191 118 121 84 121 152" fill="#fff"/></g><path d="M191,118l70,34c-0.27,0-41.76,25-60.63,36.24a17.64,17.64,0,0,1-18,0C163.47,177,121,152,121,152Z" fill="#fff" opacity="0.6"/><path d="M200.23,47.65C219.09,58.88,261,84,261,84l-70,34L121,84c0.27,0,42.31-25.12,61.18-36.36A17.64,17.64,0,0,1,200.23,47.65Z" fill="#fff"/><g opacity="0.8"><path d="M145,20.58l-35,17,35,17S144.89,20.72,145,20.58Z" fill="#fff"/></g><g opacity="0.8"><polygon points="75 54.58 110 37.58 75 20.58 75 54.58" fill="#fff"/></g><path d="M110,37.58l35,17c-0.14,0-20.88,12.5-30.31,18.12a8.82,8.82,0,0,1-9,0C96.23,67.08,75,54.58,75,54.58Z" fill="#fff" opacity="0.6"/><path d="M114.61,2.4C124,8,145,20.58,145,20.58l-35,17-35-17C75.14,20.59,96.16,8,105.59,2.4A8.82,8.82,0,0,1,114.61,2.4Z" fill="#fff"/><g opacity="0.8"><path d="M101,91L51,115.54l50,24.53S100.84,91.21,101,91Z" fill="#fff"/></g><g opacity="0.8"><polygon points="1 140.07 51 115.54 1 91.02 1 140.07" fill="#fff"/></g><path d="M51,115.54l50,24.53c-0.19,0-29.83,18-43.3,26.14a12.5,12.5,0,0,1-12.89,0C31.34,158.1,1,140.07,1,140.07Z" fill="#fff" opacity="0.6"/><path d="M57.59,64.79C71.06,72.9,101,91,101,91L51,115.54,1,91C1.19,91,31.22,72.9,44.7,64.79A12.5,12.5,0,0,1,57.59,64.79Z" fill="#fff"/></g></svg></a>
+                                <nav class="social">
+                                    <a href="//groups.google.com/forum/#!forum/lagom-framework"><span>Mailing list</span></a>
+                                    <a href="//twitter.com/lagom"><span>Twitter</span></a>
+                                    <a href="//github.com/lagom/lagom"><span>Github</span></a>
+                                    <a href="//stackoverflow.com/questions/tagged/lagom"><span>Stackoverflow</span></a>
+                                </nav>
+                                <nav class="sections-scroll">
+                                    
+
+<a href="/sekyll-docs/get-started.html">Try Lagom</a>
+<a href="/sekyll-docs/documentation/">Documentation</a>
+<a href="/sekyll-docs/get-involved.html">Get Involved</a>
+<a href="/sekyll-docs/blog/">Blog</a>
+
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+    <header class="fw-wrapper lgm-purple page-title">
+        <div class="row">
+            <div class="small-12 columns">
+                <h1>Lagom Change Log</h1>
+            </div>
+        </div>
+    </header>
+
+    <article class="fw-wrapper page-content">
+        <div class="row">
+            <div class="small-12 large-7 columns">
+                
+    <h2>Lagom 1.3.6</h2>
+<p><em>Released 17 July 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/865">865</a> Map Descriptor in ServiceClientInvocationHandler (Edouard Kaiser)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/877">877</a> Fix the match for failed futures (Tim Moore)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/873">873</a> Add method completedStatements with varargs (Yuliana Apaza)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/859">859</a> Quote sbt.version in the sbt new command (AmeerGN)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/849">849</a> Update docs to use describeService (Tim Moore)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/847">847</a> Warn when describeServices is overridden (Tim Moore)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/845">845</a> Fix typo (Yuliana Apaza)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/843">843</a> Update sbt-conductr version to 2.3.5 in docs (Ignasi Marimon-Clos)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/838">838</a> Travis injects values using env vars, not system props (Ignasi Marimon-Clos)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/821">821</a> Run whitesource in Travis CI (Ignasi Marimon-Clos)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/833">833</a> Issue #831, updated mentions of Production Suite to Enterprise Suite (Ruth Stento)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/830">830</a> Fix support for overriding describeService (Tim Moore)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/828">828</a> Add &ldquo;group: edge&rdquo; to .travis.yml (Renato Cavalcanti)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/823">823</a> deprecate Descriptor#publishing (Elijah Rippeth)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/818">818</a> deprecate typo-infused public API by introducing preferred API. (Elijah Rippeth)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/810">810</a> Add awaits to CqrsIntegrationTest (Ignasi Marimon-Clos)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/812">812</a> fix link broken due to capitalisation (mihbor)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/803">803</a> Log project names with dependency problems (Tim Moore)</li>
+</ul>
+<h2>Lagom 1.4.0-M1</h2>
+<p><em>Released 28 June 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/840">840</a> Bumps play to 2.6 GA</li>
+  <li><a href="https://github.com/lagom/lagom/issues/837">837</a> bump sbt version to 0.13.15 and removes deprecated syntax. (thanks <a href="https://github.com/erip">erip</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/666">666</a> Update sbt to 0.13.15</li>
+  <li><a href="https://github.com/lagom/lagom/issues/681">681</a> Test Play 2.6 RC</li>
+  <li><a href="https://github.com/lagom/lagom/issues/680">680</a> Update Akka to 2.5.0</li>
+  <li><a href="https://github.com/lagom/lagom/issues/820">820</a> Prepares Lagom to run whitesource in <code>master</code></li>
+  <li><a href="https://github.com/lagom/lagom/issues/766">766</a> Adds documentation for SlickReadSide</li>
+  <li><a href="https://github.com/lagom/lagom/issues/763">763</a> Added the ability add custom infrastructure services</li>
+  <li><a href="https://github.com/lagom/lagom/issues/750">750</a> Fix deprecation warnings in the sbt plugin</li>
+  <li><a href="https://github.com/lagom/lagom/issues/737">737</a> Fixes both header and formatting for multi-jvm. Enables check on CI.</li>
+  <li><a href="https://github.com/lagom/lagom/issues/229">229</a> Update Reactive Platform installation instructions</li>
+  <li><a href="https://github.com/lagom/lagom/issues/733">733</a> Add a script to help configure Cassandra keyspaces</li>
+  <li><a href="https://github.com/lagom/lagom/issues/718">718</a> Refactor the service locator holder to expose a future to avoid polling</li>
+  <li><a href="https://github.com/lagom/lagom/issues/714">714</a> Slick read side (thanks <a href="https://github.com/odwrotnie">odwrotnie</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/717">717</a> Removes unnecessary, hardcoded execution context</li>
+  <li><a href="https://github.com/lagom/lagom/issues/704">704</a> Update Scala to 2.11.11</li>
+  <li><a href="https://github.com/lagom/lagom/issues/691">691</a> Introduce a convenience method on TopicProducer for tagged streams</li>
+  <li><a href="https://github.com/lagom/lagom/issues/676">676</a> Replace Immutable with Lombok in the Maven Java projects (thanks <a href="https://github.com/yg-apaza">yg-apaza</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/663">663</a> Fail on missing keyspace configuration</li>
+  <li><a href="https://github.com/lagom/lagom/issues/649">649</a> Use new Slick 3.2 DB profile classes in configuration defaults and examples</li>
+  <li><a href="https://github.com/lagom/lagom/issues/546">546</a> Update Slick to 3.2.0</li>
+  <li><a href="https://github.com/lagom/lagom/issues/642">642</a> Update Akka Persistence JDBC to 2.4.17.1 and Slick to 3.2.0</li>
+  <li><a href="https://github.com/lagom/lagom/issues/590">590</a> Bump play version and move akka-testkit off compile scope (thanks <a href="https://github.com/benmccann">benmccann</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/577">577</a> [MINOR] Code refactored with unnecessary if conditions (thanks <a href="https://github.com/himani1">himani1</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/567">567</a> Update version on master to 1.4.0-SNAPSHOT</li>
+  <li><a href="https://github.com/lagom/lagom/issues/560">560</a> Increase timeouts in CqrsIntegrationTest</li>
+  <li><a href="https://github.com/lagom/lagom/issues/504">504</a> [Minor] Code refactored (thanks <a href="https://github.com/himani1">himani1</a>)</li>
+</ul>
+<h2>Lagom 1.3.5</h2>
+<p><em>Released 13 June 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/794">794</a> Bumps akka to 2.4.19 as suggested by Akka team</li>
+  <li><a href="https://github.com/lagom/lagom/issues/796">796</a> Update jboss-logging to 3.3.0.Final</li>
+  <li><a href="https://github.com/lagom/lagom/issues/789">789</a> Updates PlayJsonSerializer to first perform the class rename migration and then look up the transformation migration by the new class name (thanks <a href="https://github.com/crfeliz">@crfeliz</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/781">781</a> Register a shutdown hook for ActorSytem in scaladsl lagom client</li>
+  <li><a href="https://github.com/lagom/lagom/issues/778">778</a> Doc Fix: Update MessageBrokerApi.md documentation (thanks <a href="https://github.com/crfeliz">@crfeliz</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/776">776</a> Align maven archetype with lagom-java.g8</li>
+  <li><a href="https://github.com/lagom/lagom/issues/768">768</a> Fixes Flaky Kafka tests</li>
+  <li><a href="https://github.com/lagom/lagom/issues/765">765</a> Use appropriate offset in topic build op</li>
+  <li><a href="https://github.com/lagom/lagom/issues/757">757</a> Avoid relying on default contact-point settings</li>
+  <li><a href="https://github.com/lagom/lagom/issues/751">751</a> Update jackson reference.conf to use concatenation (thanks <a href="https://github.com/jaiew">@jaiew</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/752">752</a> Allow Kafka consumers to batch messages</li>
+  <li><a href="https://github.com/lagom/lagom/issues/799">799</a> Bumps APC version to 0.29</li>
+  <li><a href="https://github.com/lagom/lagom/issues/777">777</a> Plug Circuit breaker to Java ConfigurationServiceLocator (thanks <a href="https://github.com/edouardKaiser">@edouardKaiser</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/782">782</a> Actions.empty should be publicly accessible (thanks <a href="https://github.com/guizmaii">@guizmaii</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/775">775</a> Add a PathParamSerializer for Double (thanks <a href="https://github.com/guizmaii">@guizmaii</a>)</li>
+</ul>
+<h2>Lagom 1.3.4</h2>
+<p><em>Released 16 May 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/700">700</a> Fixed deprecation warning produced by forServer macro</li>
+  <li><a href="https://github.com/lagom/lagom/issues/740">740</a> Allow disabling offsetStore auto creation (thanks <a href="https://github.com/vladimirshin">@vladimirshin</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/738">738</a> Fixed default header checking for WebSockets (hat tip <a href="https://github.com/2beaucoup">@2beaucoup</a></li>
+  <li><a href="https://github.com/lagom/lagom/issues/741">741</a> Adds missing placeholder on log</li>
+  <li><a href="https://github.com/lagom/lagom/issues/724">724</a> Update RP docs and links to SBR documentation</li>
+  <li><a href="https://github.com/lagom/lagom/issues/735">735</a> Use a non-conflicting Cassandra config file name</li>
+  <li><a href="https://github.com/lagom/lagom/issues/707">707</a> Support well known ports in the service registry</li>
+  <li><a href="https://github.com/lagom/lagom/issues/728">728</a> Kafka service name override (thanks <a href="https://github.com/markusjura">@markusjura</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/729">729</a> Ignores lagomCassandraPort when embedded C* is disabled</li>
+  <li><a href="https://github.com/lagom/lagom/issues/715">715</a> Removes obsolete &lsquo;cassandra-config&rsquo; from mvn archetype</li>
+  <li><a href="https://github.com/lagom/lagom/issues/716">716</a> Improves sample tests to prevent flaky-ness</li>
+  <li><a href="https://github.com/lagom/lagom/issues/745">745</a> Use https links where possible in documentation</li>
+  <li><a href="https://github.com/lagom/lagom/issues/725">725</a> Update more links to HTTPS</li>
+</ul>
+<h2>Lagom 1.3.3</h2>
+<p><em>Released 28 April 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/435">435</a> Fixed running embedded Cassandra in tests on Windows</li>
+  <li><a href="https://github.com/lagom/lagom/pull/633">633</a> Deprecated multiple descriptors per service</li>
+  <li><a href="https://github.com/lagom/lagom/pull/637">637</a> Enable metrics delivery by default in Scala</li>
+  <li><a href="https://github.com/lagom/lagom/issues/664">664</a> Allow tests to share JVMs when running embedded Cassandra</li>
+  <li><a href="https://github.com/lagom/lagom/pull/690">690</a> Fix connecting to Cassandra on non default ports</li>
+  <li><a href="https://github.com/lagom/lagom/issues/694">694</a> Fix customising the groupId for Kafka subscriptions</li>
+</ul>
+<p>Migration notes can be found <a href="blog/lagom-1-3-3.html">here</a>.</p>
+<h2>Lagom 1.3.2</h2>
+<p><em>Released 19 April 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/pull/554">554</a> Update Akka to 2.4.17</li>
+  <li><a href="https://github.com/lagom/lagom/pull/581">581</a> Refactored dependencies into separate file</li>
+  <li><a href="https://github.com/lagom/lagom/pull/588">588</a> Remove version from manifest to get serialiser from the registry</li>
+  <li><a href="https://github.com/lagom/lagom/pull/586">586</a> Created dependency whitelist validation</li>
+  <li><a href="https://github.com/lagom/lagom/pull/599">599</a> Created Maven dependency management pom</li>
+  <li><a href="https://github.com/lagom/lagom/pull/601">601</a> Configure the Cassandra keyspace in the Maven archetype</li>
+  <li><a href="https://github.com/lagom/lagom/pull/600">600</a> Remove unused archetype properties</li>
+  <li><a href="https://github.com/lagom/lagom/pull/609">609</a> Add new <code>BadRequest</code> transport exception</li>
+  <li><a href="https://github.com/lagom/lagom/pull/594">594</a> Adds test for ServiceDiscovery in LagomScala</li>
+  <li><a href="https://github.com/lagom/lagom/pull/613">613</a> Deprecate the Cassandra keyspace build config</li>
+  <li><a href="https://github.com/lagom/lagom/pull/624">624</a> Fix comment typo in <code>Reloader.scala</code></li>
+  <li><a href="https://github.com/lagom/lagom/pull/632">632</a> Warn on implicit keyspace config</li>
+  <li><a href="https://github.com/lagom/lagom/pull/636">636</a> Remove reference to Cassandra in the <code>JdbcReadside</code> API documentation</li>
+  <li><a href="https://github.com/lagom/lagom/pull/684">684</a> Ensure maven plugin adds right dependency for Play integration</li>
+</ul>
+<p>Migration notes can be found <a href="blog/lagom-1-3-2.html">here</a>.</p>
+<h2>Lagom 1.3.1</h2>
+<p><em>Released 06 March 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/511">511</a> Look Kafka broker config up from the service locator</li>
+  <li><a href="https://github.com/lagom/lagom/issues/532">532</a> Circuit breakers are off by default in Scala API</li>
+  <li><a href="https://github.com/lagom/lagom/issues/553">553</a> Update Akka to 2.4.17</li>
+  <li><a href="https://github.com/lagom/lagom/issues/564">564</a> ConductR is not setting seed node information for a Lagom Scala app</li>
+  <li><a href="https://github.com/lagom/lagom/issues/498">498</a> JDBC generate tables check for existing table does not work with a schema other than public</li>
+</ul>
+<h2>Lagom 1.3.0</h2>
+<p><em>Released 23 February 2017</em></p>
+<p>The main features of this release are:</p>
+<ul>
+  <li><a href="/documentation/1.3.x/scala/Home.html">Scala API</a></li>
+  <li><a href="/documentation/1.3.x/java/ReadSideJPA.html">JPA support</a></li>
+  <li><a href="/documentation/1.3.x/java/MessageBrokerTesting.html">Improved testing APIs for message broker support</a></li>
+  <li>Switch from Activator to sbt 0.13.13 with Giter8 templates</li>
+</ul>
+<p>For a full list of issues fixed in 1.3.0, see <a href="https://github.com/lagom/lagom/issues?utf8=%E2%9C%93&q=milestone%3A1.3.0">GitHub</a>.</p>
+<h2>Lagom 1.2.3</h2>
+<p><em>Released 06 March 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/476">476</a> Invalid keyspaces when using lagom:runAll in Maven with unmanaged Cassandra</li>
+  <li><a href="https://github.com/lagom/lagom/issues/446">446</a> Persistence tables fail to be created in MySQL</li>
+  <li><a href="https://github.com/lagom/lagom/issues/449">449</a> No way to disable JDBC offset table creation</li>
+  <li><a href="https://github.com/lagom/lagom/issues/403">403</a> KafkaLocalServer should not be loading properties from the classpath</li>
+  <li><a href="https://github.com/lagom/lagom/issues/426">426</a> lagomExternalProject is broken</li>
+  <li><a href="https://github.com/lagom/lagom/pull/519">519</a> Fixed Eclipse warnings for Maven archetype</li>
+  <li><a href="https://github.com/lagom/lagom/issues/498">498</a> JDBC generate tables check for existing table does not work with a schema other than public</li>
+</ul>
+<h2>Lagom 1.2.2</h2>
+<p><em>Released 12 January 2017</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/318">318</a> bugfix: can&rsquo;t use JDBC persistence when usin Maven as build tool.</li>
+</ul>
+<h2>Lagom 1.2.1</h2>
+<p><em>Released 07 December 2016</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/pull/307">307</a> Docs: Cassandra and cluster are disabled by default. (thanks <a href="https://github.com/mihbor">@mihbor</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/issues/285">285</a> Regression: Jackson exception when using immutables in lagom 1.2.0 (thanks <a href="https://github.com/mihbor">@mihbor</a>)</li>
+  <li><a href="https://github.com/lagom/lagom/pull/301">301</a> Improve tests stability</li>
+  <li><a href="https://github.com/lagom/lagom/pull/274">274</a> Performance: Avoid stream materialization on requests with no body</li>
+</ul>
+<h2>Lagom 1.2.0</h2>
+<p><em>Released 08 November 2016</em></p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/pull/161">161</a> Message broker/Kafka support</li>
+  <li><a href="https://github.com/lagom/lagom/issues/63">63</a> JDBC support</li>
+  <li><a href="https://github.com/lagom/lagom/issues/126">126</a> Generic read-side support</li>
+  <li><a href="https://github.com/lagom/lagom/issues/73">73</a> Automatic offset handling</li>
+  <li><a href="https://github.com/lagom/lagom/pull/151">151</a> Read-side overhaul, including sharded read sides</li>
+</ul>
+<p>For a full list of issues fixed in 1.2.0, see <a href="https://github.com/lagom/lagom/issues?utf8=%E2%9C%93&q=milestone%3A1.2.0">GitHub</a>.</p>
+<h2>Lagom 1.1.0</h2>
+<p><em>Released 21 September 2016</em></p>
+<p>The primary feature of this release is Maven support.</p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/101">101</a> Assign service ports from ephemeral port range.</li>
+  <li><a href="https://github.com/lagom/lagom/issues/112">112</a> Maven support.</li>
+</ul>
+<h2>Lagom 1.0.0</h2>
+<p><em>Released 21 July 2016</em></p>
+<p>First GA release of Lagom.</p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/107">107</a> Comprehensive error reporting in dev mode.</li>
+  <li><a href="https://github.com/lagom/lagom/issues/111">111</a> Make circuit breakers a service locator concern.</li>
+</ul>
+<h2>Lagom 1.0.0-M2</h2>
+<p><em>Released 5 May 2016</em></p>
+<p>Second MVP release. The major change in this release is that <code>ServiceCall</code> no longer has an ID parameter, instead parameters extracted from the URL are passed directly to the service interface method. See issue <a href="https://github.com/lagom/lagom/pull/99">99</a> for more details, and the <a href="/documentation/1.0.x/ServiceDescriptors.html">Service Descriptors</a> documentation.</p>
+<ul>
+  <li><a href="https://github.com/lagom/lagom/issues/26">26</a> Fix Cassandra chewing 100% of CPU</li>
+  <li><a href="https://github.com/lagom/lagom/issues/32">32</a> Ensure default memory options are suitable for Lagom</li>
+  <li><a href="https://github.com/lagom/lagom/issues/41">41</a> Improve service locator port conflict error reporting</li>
+  <li><a href="https://github.com/lagom/lagom/pull/53">53</a> Improve dev mode specific dependency injection</li>
+  <li><a href="https://github.com/lagom/lagom/pull/75">75</a> Ensure query parameters get added to client requests</li>
+  <li><a href="https://github.com/lagom/lagom/issues/91">91</a> Fix Cassandra reconnection issues</li>
+  <li><a href="https://github.com/lagom/lagom/pull/99">99</a> Rework URL parameter handling</li>
+  <li><a href="https://github.com/lagom/lagom/pull/102">102</a> Ensure service interfaces can be implemented using a Scala trait</li>
+</ul>
+<h2>Lagom 1.0.0-M1</h2>
+<p><em>Released 10 March 2016</em></p>
+<p>First MVP release.</p>
+
+            </div>
+            <aside class="show-for-medium small-12 large-4 columns">
+                <nav class="side-menu">
+                    
+
+<h3>Documentation</h3>
+<ul>
+    <li><a href="/sekyll-docs/get-started.html">Get started</a></li>
+    <li><a href="/sekyll-docs/documentation/">Full documentation</a></li>
+    <li><a href="/sekyll-docs/blog">Blog</a></li>
+</ul>
+<h3>Find help</h3>
+<ul>
+    <li><a href="https://gitter.im/lagom/lagom">Gitter channel</a></li>
+    <li><a href="https://stackoverflow.com/questions/tagged/lagom">Stack overflow</a></li>
+    <li><a href="https://www.lightbend.com/services/expert-support">Professional support</a></li>
+</ul>
+<h3>Contribute</h3>
+<ul>
+    <li><a href="/sekyll-docs/get-involved.html">Get involved</a></li>
+    <li><a href="/sekyll-docs/conduct.html">Code of conduct</a></li>
+    <li><a href="/sekyll-docs/community-process.html">Community process</a></li>
+    <li><a href="/sekyll-docs/contributing.html">Contributor guidelines</a></li>
+</ul>
+<h3>Programs</h3>
+<ul>
+    <li><a href="/sekyll-docs/outreachy/round14.html">Outreachy</a></li>
+</ul>
+
+                </nav>
+            </aside>
+        </div>
+    </article>
+
+
+
+                    <footer>
+                        <section class="fw-wrapper lb-grey-dkr support">
+                            <div class="row">
+                                <div class="small-12 medium-6 columns">
+                                    <svg class="svg-icon svg-icon-chat" version="1.1" id="Chat" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+<path fill="#ffffff" d="M5.8,12.2V6H2C0.9,6,0,6.9,0,8v6c0,1.1,0.9,2,2,2h1v3l3-3h5c1.1,0,2-0.9,2-2v-1.82c-0.064,0.014-0.132,0.021-0.2,0.021h-7
+	V12.2z M18,1H9C7.9,1,7,1.9,7,3v8h7l3,3v-3h1c1.1,0,2-0.899,2-2V3C20,1.9,19.1,1,18,1z"/>
+</svg>
+
+                                    <h3>Community support</h3>
+                                    <ul>
+                                        <li><a href="//groups.google.com/forum/#!forum/lagom-framework">Mailing list</a></li>
+                                        <li><a href="//stackoverflow.com/questions/tagged/lagom">Stackoverflow</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 columns">
+                                    <svg class="svg-icon svg-icon-lb-icon-reverse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 302 262">
+    <title>lightbend-icon</title>
+    <path  fill="#ffffff" d="M1,195v56a10,10,0,0,0,10,10H291a10,10,0,0,0,10-10V195a557.85,557.85,0,0,1-150,20A557.85,557.85,0,0,1,1,195Z" />
+    <path  fill="#ffffff" d="M291,1H11A10,10,0,0,0,1,11V176a539.94,539.94,0,0,0,150,21,539.94,539.94,0,0,0,150-21V11A10,10,0,0,0,291,1Z" />
+</svg>
+
+                                    <h3>Professional support</h3>
+                                    <ul>
+                                        <li><a href="//www.lightbend.com/services/expert-support">Lightbend Subscription</a></li>
+                                        <li><a href="//www.lightbend.com/services/training">Training</a></li>
+                                        <li><a href="//www.lightbend.com/services/consulting">Consulting</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="fw-wrapper lb-grey links">
+                            <div class="row">
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Lagom</h3>
+                                    <ul class="no-bullet">
+                                        <li><a href="/sekyll-docs/get-started.html">Get started</a></li>
+                                        <li><a href="/sekyll-docs/blog">Blog</a></li>
+                                        <li><a href="/sekyll-docs/documentation/">Documentation</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Community links</h3>
+                                    <ul>
+                                        <li><a href="//www.eventbrite.com/directory/?q=lagom&amp;loc=Worldwide">Events <em>via Eventbrite</em></a></li>
+                                        <li><a href="http://www.indeed.com/jobs?q=%22lagom%22&amp;l=">Jobs <em>via Indeed</em></a></li>
+                                        <li><a href="http://www.scoop.it/lagom">Blogs <em>via Scoop.it</em></a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Code &amp; contribution</h3>
+                                    <ul>
+                                        <li><a href="//github.com/lagom/lagom/issues">Bug tracker <em>GitHub</em></a></li>
+                                        <li><a href="/sekyll-docs/get-involved.html">Get involved</a></li>
+                                    </ul>
+                                </div>
+                                <div class="small-12 medium-6 large-3 columns">
+                                    <h3>Social networks</h3>
+                                    <ul>
+                                        <li><a href="//twitter.com/lagom"><span>Twitter</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="fw-wrapper lgm-purple-dkr credits">
+                            <div class="row">
+                                <div class="small-12 medium-3 columns">
+                                    <a href="/sekyll-docs/" class="logo"><img src="/sekyll-docs/images/logos/lagom-reverse.svg"></a>
+                                </div>
+                                <div class="small-12 medium-3 columns">
+                                    <a href="//lightbend.com" class="partner"><img src="/sekyll-docs/images/logos/lightbend-reverse.svg"></a>
+                                </div>
+                                <div class="small-12 medium-6 columns">
+                                    <p>Lagom is released under the Apache 2 License</p>
+                                </div>
+                            </div>
+                        </section>
+
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="/sekyll-docs/0.1-all-scripts-concat.js"></script>
+    
+    
+    <script>
+  		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  		ga('create', 'UA-84991267-1', 'auto');
+  		ga('send', 'pageview');
+	</script>
+</html>

@@ -1,0 +1,358 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<base href="/sekyll-docs/"/>
+    <title>Modern Business - Start Bootstrap Template</title>
+
+    <link href="/sekyll-docs/css/all-0.1.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Temporary navbar container fix -->
+    <style>
+    .navbar-toggler {
+        z-index: 1;
+    }
+    
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    /* Temporary fix for img-fluid sizing within the carousel */
+    
+    .carousel-item.active,
+    .carousel-item-next,
+    .carousel-item-prev {
+        display: block;
+    }
+    html {
+	    overflow-y: scroll;
+	}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+                            <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+                            <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+                            <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+                            <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="blog">Blog</a>
+                            <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+                            <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+                            <a class="dropdown-item" href="blog-post.html">Blog Post</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Other Pages
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+                            <a class="dropdown-item" href="full-width.html">Full Width Page - demo</a>
+                            <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+                            <a class="dropdown-item" href="faq.html">FAQ</a>
+                            <a class="dropdown-item" href="404.html">404</a>
+                            <a class="dropdown-item" href="pricing.html">Pricing Table</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Readme of Sekyll<small>by 
+                        <a href="https://github.com/raisercostin">
+                            <img src="https://avatars2.githubusercontent.com/u/1624467?v=4" style="width:2em;"/>
+                        </a></small></h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Readme of Sekyll</li>
+        </ol>
+
+        <div class="row">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Preview Image -->
+                <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+                <hr>
+
+                <!-- Date/Time -->
+				<p>Posted on August 13, 2017 at 03:00 by <a class="blog-author-name" href="https://github.com/raisercostin"><img src="https://avatars2.githubusercontent.com/u/1624467?v=4" style="width:2em;"/> raisercostin</a></p>
+                <hr>
+
+                <!-- Post Content -->
+                <h1><a href="#sekyll" name="sekyll">Sekyll</a></h1>
+<h1><a href="#how-it-works" name="how-it-works">How it works</a></h1>
+<p>Everything in <code>public/</code> is published at raisercostin.gitlab.io .<br/>The content in <code>public</code> is a manual copy of a <code>target/web/stage</code>.</p>
+<h2><a href="#generating-site-locally" name="generating-site-locally">Generating site locally</a></h2>
+<p>The build is made with <code>sbt</code>.<br/>- eclipse: <code>sbt eclipse</code><br/>- compile: <code>sbt clean compile</code><br/>- generate web: <code>sbt webStage</code><br/>- start server for in dev mode with autorefresh: <code>sbt run</code> . Then go on <a href="http://localhost:8080/">http://localhost:8080/</a><br/>- start server in debug mode <code>activator -jvm-debug 5005 &quot;run 8080&quot;</code></p>
+<h1><a href="#features" name="features">Features</a></h1>
+<h2><a href="#history" name="history">History</a></h2>
+<h3>2017-08-11</h3>
+<ul>
+  <li>more control of assetFingerPrint:</li>
+</ul>
+<ol>
+  <li>manually changed in the <code>publicVersion</code> value in <code>build.sbt</code>? Drawback: browsers might cache styles and javascripts for long time and will not reload new versions. The generator should generate a new file from time to time or when the resources are changed.</li>
+</ol>
+<h1><a href="#backlog" name="backlog">Backlog</a></h1>
+<h2><a href="#todo" name="todo">ToDo</a></h2>
+<ul>
+  <li>publish at <a href="http://sekyll.gitlab.io">http://sekyll.gitlab.io</a> and <a href="http://sekyll.github.io">http://sekyll.github.io</a></li>
+  <li>generate directly in <code>public/</code> not in <code>target/web/stage</code></li>
+  <li>switch from style and sass to less as less has native compilation in sbt.</li>
+  <li>cleanup</li>
+  <li>deploy command to release static site to</li>
+  <li>folder</li>
+  <li>other branch</li>
+  <li>render current branch by scripts in</li>
+  <li>github</li>
+  <li>gitlab (for private repos)</li>
+</ul>
+<h2><a href="#how-could-work" name="how-could-work">How could work</a></h2>
+<ul>
+  <li>Generate in a separate branch and publish from there.</li>
+  <li>There are some issues on keeping the history of that.</li>
+  <li>Uploading only the sources and generate the public folder at runtime has the drawback of not having the history of the final generated site.</li>
+</ul>
+<h2><a href="#quircks" name="quircks">Quircks</a></h2>
+<p>Here we explain what we tried and failed.</p>
+<h3><a href="#gitlab" name="gitlab">Gitlab</a></h3>
+<ul>
+  <li>Don&rsquo;t publish the <code>target/web/stage</code> folder directory by configuring it in <code>.gitlab-ci.yml</code> as this will fail.</li>
+  <li>Sass and Style sbt-web plugins need external dependency on nodejs/npm and it will take longer time to compile.</li>
+  <li>Sbt fails to build in gitlab after 1h.</li>
+</ul>
+<h2><a href="#rejected" name="rejected">Rejected</a></h2>
+<ul>
+  <li>more control of assetFingerPrint:</li>
+  <li>based on the git head: <code>val assetFingerPrint = &quot;git rev-parse HEAD&quot;.!!.trim</code>
+    <ul>
+      <li>This has the problem that on any change anywhere all the files are affected.</li>
+    </ul>
+  </li>
+  <li>based on the actual content of each generated/combined file instead of current version in head.
+    <ul>
+      <li>This is a fingerprinting on each file. Might work if a fingerprint on content on all of the files is computed.</li>
+    </ul>
+  </li>
+</ul>
+<h1><a href="#old-lagom-site" name="old-lagom-site">Old lagom site</a></h1>
+<h2><a href="#lagom-website" name="lagom-website">Lagom website</a></h2>
+<p>This project is responsible for generating the Lagom website.</p>
+<p>The Lagom website is a static website deployed to GitHub pages that is generated from this project. This project uses twirl for templating, along with sbt-web to process web assets and webjar for dependencies.</p>
+<p>The documentation is generated from the lagom main project as unstyled HTML snippets, along with javadocs/scaladocs, and an index file that describes the navigation structure of the documentation. Each time the website is generated, the documentation pages are recreated from these HTML snippets, allowing the layout and styling to be kept up to date, and allowing links between versions of the documentation.</p>
+<h3><a href="#project-layout" name="project-layout">Project layout</a></h3>
+<pre class="prettyprint"><code>- src
+  - blog - each markdown file in here gets converted to a blog post
+  - docs
+    - 1.0.x - the documentation for each version of Lagom
+      - index.json - the index for this version of the docs
+      - api - api docs
+  - main
+    - markdown - each file in here gets served as a web page
+    - twirl - twirl templates for the documentation
+    - assets - compiled assets, eg, stylus stylesheets
+    - public - static assets, eg images
+    - scala - the Scala source code that actually does the documentation generation
+</code></pre>
+<h3><a href="#developing-the-website" name="developing-the-website">Developing the website</a></h3>
+<p>A static version of the website can be generated by running <code>sbt web-stage</code>. This will output the entire website to the <code>target/web/stage</code> directory. You should start a simple HTTP server from here to serve the docs, eg using <code>python -m SimpleHTTPServer</code>. The <code>sbt ~web-stage</code> command can be used to tell sbt to watch for changes and rebuild the site whenever anything changes.</p>
+<p>For convenience, <code>sbt run</code> does the above for you, starting a static Akka HTTP server in the stage directory, and then watching the filesystem for changes and rebuilding the site whenever it changes.</p>
+<h3><a href="#deploying-the-documentation" name="deploying-the-documentation">Deploying the documentation</a></h3>
+<p>A new version of the markdown docs can be generated by running <code>sbt markdownGenerateAllDocumentation</code> in the <code>docs</code> directory of the main Lagom project, this outputs the documentation to <code>docs/target/markdown-generated-docs</code>. This can be then copied into the corresponding <code>src/docs/&lt;version&gt;</code> directory in this project.</p>
+<p>A new version of the API docs can be generated by running <code>sbt unidoc</code> in the main Lagom project. This will output the javadocs in <code>target/javaunidoc</code>, which can then be copied into the corresponding <code>src/docs/&lt;version&gt;/api/java</code> directory in this project.</p>
+<h3><a href="#writing-blog-posts" name="writing-blog-posts">Writing blog posts</a></h3>
+<p>Lagom uses a format similar to Jekyll for writing blog posts. Blog posts are written in markdown, prefixed with a front matter in YAML format. To create a new blog post, copy the <code>src/blog/_template.md</code> file to a new file in the same directory. The name of the file should match the URL that you want it served at, so for example, if you want it to be served at <code>blog/my-blog-post.html</code>, it should be in <code>src/blog/my-blog-post.md</code>.</p>
+<p>Edit the front matter to suit your needs. The <code>title</code> and <code>date</code> fields are compulsory. The <code>author_github</code>, if provided, will be used by the website generator to lookup the author details from GitHub, including the name, URL and Avatar of the author. These can all be overridden, and must be provided manually if no GitHub username is provided, using the <code>author_name</code>, <code>author_url</code> and <code>author_avatar</code> fields.</p>
+<p>The <code>tags</code> field can be used to specify a space separated list of tags. Multi-word tags can be configured by separating the words with a <code>+</code> symbol. The <code>summary</code> field can be used to provide a summary, this is what&rsquo;s displayed on the blog index page as well as on the tag index pages, and it will be markdown rendered. Usually it will simply be the first paragraph of the blog post.</p>
+<p>The remainder of the file is the blog post. You can preview your blog post by following the <a href="#developing-the-website">Developing the website</a> instructions above.</p>
+                
+
+                <!-- Comments Form -->
+                <div class="card my-4">
+                    <h5 class="card-header">Leave a Comment:</h5>
+                    <div class="card-block">
+                        <form>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Single Comment -->
+                <div class="media mb-4">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Commenter Name</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                    </div>
+                </div>
+
+                <!-- Comment with nested comments -->
+                <div class="media mb-4">
+                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                    <div class="media-body">
+                        <h5 class="mt-0">Commenter Name</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+
+                        <div class="media mt-4">
+                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                            <div class="media-body">
+                                <h5 class="mt-0">Commenter Name</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>
+
+                        <div class="media mt-4">
+                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                            <div class="media-body">
+                                <h5 class="mt-0">Commenter Name</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Search Widget -->
+                <div class="card mb-4">
+                    <h5 class="card-header">Search</h5>
+                    <div class="card-block">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Categories</h5>
+                    <div class="card-block">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">HTML</a></li>
+                                    <li><a href="#">Freebies</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#">JavaScript</a></li>
+                                    <li><a href="#">CSS</a></li>
+                                    <li><a href="#">Tutorials</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Widget -->
+                <div class="card my-4">
+                    <h5 class="card-header">Side Widget</h5>
+                    <div class="card-block">
+                        You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+
+
+    <!-- Footer -->
+   	<button type="button" class="scrollup btn btn-outline-primary">&#xf0d8;</button>
+	<!-- <a href="#" class="scrollup" style="display: block;"></a> -->
+	<footer class="py-5 bg-inverse">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="/sekyll-docs/js/all-0.1.js"></script>
+    
+    
+	
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57a0eb1ac33f75f8"></script>
+    <script>
+        var disqus_config = function () {
+            this.page.url = "http://raisercostin.org/sekyll-docs/blog/article2.html";
+            this.page.identifier = "article2";
+            this.page.title = "Readme of Sekyll";
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = '//lagomframework.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+</body>
+</html>

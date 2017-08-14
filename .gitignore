@@ -10,4 +10,5 @@
 *.DS_Store
 /project/target/
 /project/project/
-docs/
+#master will contain the generated docs
+#docs/
