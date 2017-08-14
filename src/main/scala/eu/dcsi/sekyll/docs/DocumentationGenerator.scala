@@ -75,7 +75,7 @@ object DocumentationGenerator extends App {
   //for master
   //val (baseUrl, context) = ("http://raisercostin.org/sekyll","/sekyll")
   //for template
-  val (baseUrl, context) = ("http://localhost","/")
+  val (baseUrl, context) = ("http://localhost:8080","")
     //gitHubAccount match {
     //case Some(account) => (s"http://$account.github.io/lagom.github.io", "/lagom.github.io")
     //case None => ("https://www.lagomframework.com", "")
