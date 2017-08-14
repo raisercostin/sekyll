@@ -1,4 +1,4 @@
-A sample site generated with this: http://raisercostin.org/sekyll-docs/contact.html
+The sample site generated in `master` branch: http://raisercostin.org/sekyll/
 
 # Sekyll
 
