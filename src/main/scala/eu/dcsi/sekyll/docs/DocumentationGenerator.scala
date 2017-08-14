@@ -73,9 +73,9 @@ object DocumentationGenerator extends App {
   val gitHubAccount: Option[String] = None
 
   //for master
-  //val (baseUrl, context) = ("http://raisercostin.org/sekyll","/sekyll")
+  val (baseUrl, context) = ("http://raisercostin.org/sekyll","/sekyll")
   //for template
-  val (baseUrl, context) = ("http://localhost","/")
+  //val (baseUrl, context) = ("http://localhost","/")
     //gitHubAccount match {
     //case Some(account) => (s"http://$account.github.io/lagom.github.io", "/lagom.github.io")
     //case None => ("https://www.lagomframework.com", "")
