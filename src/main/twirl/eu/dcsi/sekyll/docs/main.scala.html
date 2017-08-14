@@ -14,7 +14,8 @@
         }
         <meta name="viewport" content="width=device-width,maximum-scale=1"/>
         <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="@context.path/@context.assetFingerPrint-all-styles-concat.css" type="text/css">
+		<link href="@context.path/css/all-@{context.assetFingerPrint}.css" rel="stylesheet" type="text/css">
+        @*<link rel="stylesheet" href="@context.path/@context.assetFingerPrint-all-styles-concat.css" type="text/css">*@
         @header
     </head>
     <body>
@@ -144,7 +145,8 @@
             </div>
         </div>
     </body>
-    <script src="@context.path/@context.assetFingerPrint-all-scripts-concat.js"></script>
+	<script src="@context.path/js/all-@{context.assetFingerPrint}.js"></script>
+    @*<script src="@context.path/@context.assetFingerPrint-all-scripts-concat.js"></script>*@
     @* Footer needs to be before GA, so that page experiments load first which ensure that GA can track them *@
     @footer
     <script>
