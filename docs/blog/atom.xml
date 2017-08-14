@@ -1,8 +1,8 @@
 <feed xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2005/Atom">
       <title>Lagom Blog</title>
-      <link rel="alternate" type="text/html" href="http://raisercostin.org/sekyll-docs/blog"/>
-      <link rel="self" type="application/atom+xml" href="http://raisercostin.org/sekyll-docs/blog/atom.xml"/>
-      <id>http://raisercostin.org/sekyll-docs/blog</id>
+      <link rel="alternate" type="text/html" href="http://raisercostin.org/sekyll/blog"/>
+      <link rel="self" type="application/atom+xml" href="http://raisercostin.org/sekyll/blog/atom.xml"/>
+      <id>http://raisercostin.org/sekyll/blog</id>
       <rights>Copyright 2017, Lightbend</rights>
       <updated>2017-08-13T03:00:00.000+03:00</updated>
       <dc:creator>Lightbend</dc:creator>
@@ -11,13 +11,13 @@
       <dc:rights>Copyright 2017, Lightbend</dc:rights>
       <entry>
           <title>Readme of Sekyll</title>
-          <link rel="alternate" href="http://raisercostin.org/sekyll-docs/blog/article2.html"/>
-          <category term="news" scheme="http://raisercostin.org/sekyll-docs/blog/tags/news.html"/><category term="sample" scheme="http://raisercostin.org/sekyll-docs/blog/tags/sample.html"/><category term="readme" scheme="http://raisercostin.org/sekyll-docs/blog/tags/readme.html"/>
+          <link rel="alternate" href="http://raisercostin.org/sekyll/blog/article2.html"/>
+          <category term="news" scheme="http://raisercostin.org/sekyll/blog/tags/news.html"/><category term="sample" scheme="http://raisercostin.org/sekyll/blog/tags/sample.html"/><category term="readme" scheme="http://raisercostin.org/sekyll/blog/tags/readme.html"/>
           <author>
             <name>raisercostin</name>
             <uri>https://github.com/raisercostin</uri>
           </author>
-          <id>http://raisercostin.org/sekyll-docs/blog/article2.html</id>
+          <id>http://raisercostin.org/sekyll/blog/article2.html</id>
           <updated>2017-08-13T03:00:00.000+03:00</updated>
           <published>2017-08-13T03:00:00.000+03:00</published>
           <content type="html"><![CDATA[<h1><a href="#sekyll" name="sekyll">Sekyll</a></h1>
@@ -109,13 +109,13 @@
           <dc:date>2017-08-13T03:00:00.000+03:00</dc:date>
         </entry><entry>
           <title>Welcome to Sekyll</title>
-          <link rel="alternate" href="http://raisercostin.org/sekyll-docs/blog/article1.html"/>
-          <category term="news" scheme="http://raisercostin.org/sekyll-docs/blog/tags/news.html"/><category term="sample" scheme="http://raisercostin.org/sekyll-docs/blog/tags/sample.html"/>
+          <link rel="alternate" href="http://raisercostin.org/sekyll/blog/article1.html"/>
+          <category term="news" scheme="http://raisercostin.org/sekyll/blog/tags/news.html"/><category term="sample" scheme="http://raisercostin.org/sekyll/blog/tags/sample.html"/>
           <author>
             <name>raisercostin</name>
             <uri>https://github.com/raisercostin</uri>
           </author>
-          <id>http://raisercostin.org/sekyll-docs/blog/article1.html</id>
+          <id>http://raisercostin.org/sekyll/blog/article1.html</id>
           <updated>2017-08-13T03:00:00.000+03:00</updated>
           <published>2017-08-13T03:00:00.000+03:00</published>
           <content type="html"><![CDATA[<h2>Copied from jekyll:</h2>

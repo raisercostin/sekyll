@@ -1,8 +1,8 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>http://raisercostin.org/sekyll-docs/sitemap-main.xml</loc>
+    <loc>http://raisercostin.org/sekyll/sitemap-main.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>http://raisercostin.org/sekyll-docs/sitemap-docs.xml</loc>
+    <loc>http://raisercostin.org/sekyll/sitemap-docs.xml</loc>
   </sitemap>
 </sitemapindex>
