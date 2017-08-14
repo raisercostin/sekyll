@@ -1,4 +1,5 @@
-The sample site generated in `master` branch: http://raisercostin.org/sekyll/
+The sample site generated in `master` branch: http://raisercostin.org/sekyll
+A second sample is at http://raisercostin.gitlab.io/sekyll
 
 # Sekyll
 
